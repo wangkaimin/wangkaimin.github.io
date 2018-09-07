@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>个人记事</title>
-  <meta name="description" content="这是我的个人记事本，使用Jekyll生成，采用默认主题，托管于Github Pages上面。
-">
+  <title>掌握git：git svn 使用流程</title>
+  <meta name="description" content="Git和SVN协同模型">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://github.wangkaimin.com/">
+  <link rel="canonical" href="http://github.wangkaimin.com/git/svn/2018/09/06/git-svn.html">
   <link rel="alternate" type="application/rss+xml" title="个人记事" href="http://github.wangkaimin.com/feed.xml" />
 </head>
 
@@ -61,51 +60,79 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Sep 7, 2018</span>
-        <h3>
-          <a class="post-link" href="/linux/shell/2018/09/07/linux-shell-top.html">
-            掌握linux命令：top
-          </a>
-        </h3></li><li><span class="post-meta">Sep 7, 2018</span>
-        <h3>
-          <a class="post-link" href="/linux/shell/2018/09/07/linux-shell-pwd.html">
-            掌握linux命令：pwd
-          </a>
-        </h3></li><li><span class="post-meta">Sep 7, 2018</span>
-        <h3>
-          <a class="post-link" href="/linux/shell/2018/09/07/linux-shell-ls.html">
-            掌握linux命令：ls
-          </a>
-        </h3></li><li><span class="post-meta">Sep 7, 2018</span>
-        <h3>
-          <a class="post-link" href="/linux/shell/2018/09/07/linux-shell-ifconfig.html">
-            掌握linux命令：ifconfig
-          </a>
-        </h3></li><li><span class="post-meta">Sep 7, 2018</span>
-        <h3>
-          <a class="post-link" href="/linux/shell/2018/09/07/linux-shell-cd.html">
-            掌握linux命令：cd
-          </a>
-        </h3></li><li><span class="post-meta">Sep 7, 2018</span>
-        <h3>
-          <a class="post-link" href="/git/tag/2018/09/07/git-tag-delete.html">
-            掌握git：git tag 批量删除
-          </a>
-        </h3></li><li><span class="post-meta">Sep 6, 2018</span>
-        <h3>
-          <a class="post-link" href="/git/svn/2018/09/06/git-svn.html">
-            掌握git：git svn 使用流程
-          </a>
-        </h3></li><li><span class="post-meta">Sep 5, 2018</span>
-        <h3>
-          <a class="post-link" href="/markdown/2018/09/05/markdown-info.html">
-            Markdown 简明教程
-          </a>
-        </h3></li></ul>
+        <div class="post">
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+  <header class="post-header">
+    <h1 class="post-title">掌握git：git svn 使用流程</h1>
+    <p class="post-meta">2018-09-06</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="git和svn协同模型">Git和SVN协同模型</h1>
+
+<h2 id="1使用git-svn的一般流程">1、使用git-svn的一般流程</h2>
+
+<p><img src="https://gotgit.readthedocs.io/en/latest/_images/git-svn-workflow.png" alt="git-svn工作流" /></p>
+
+<h2 id="2具体操作流程">2、具体操作流程</h2>
+
+<h3 id="a-clone">a. clone</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git svn clone <span class="nt">-s</span> file:///path/to/svn/repos/demo git-svn-demo
+</code></pre></div></div>
+
+<ul>
+  <li><strong>-s 指明仓库采⽤用标准svn仓库布局:trunk/branches/tags，⾮非标准布局可分别指定 trung/branches/tags，请查阅⽂文档( git help svn )</strong></li>
+  <li>其中repo为仓库根⽬目录</li>
+  <li>会将svn的每⼀一个提交转换为本地Git仓库中的提交</li>
+</ul>
+
+<h2 id="b-fetch">b. fetch</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git svn fetch
+</code></pre></div></div>
+
+<ul>
+  <li>显然，由于Subversion版本库中包含了新的提交，导致执行<strong>git svn dcommit</strong>出错。这时需执行<strong>git svn fetch</strong>命令，以从Subversion版本库获取更新。</li>
+</ul>
+
+<h2 id="c-rebase">c. rebase</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git svn rebase
+</code></pre></div></div>
+
+<ul>
+  <li>当获取了新的Subversion提交之后，需要执行<strong>git svn rebase</strong>将Git中未推送到Subversion的提交通过变基（rebase）形成包含Subversion最新提交的线性提交。这是因为Subversion的提交都是线性的。</li>
+</ul>
+
+<h2 id="d-fix-conflict">d. fix conflict</h2>
+
+<ul>
+  <li>如果有冲突需要解决冲突</li>
+  <li>When you have resolved this problem run “git rebase –continue”.</li>
+  <li>If you would prefer to skip this patch, instead run “git rebase –skip”.</li>
+  <li>To restore the original branch and stop rebasing run “git rebase –abort”.</li>
+</ul>
+
+<h2 id="e-continue">e. continue</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git rebase <span class="nt">--continue</span>
+</code></pre></div></div>
+
+<h2 id="f-dcommit">f. dcommit</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git svn dcommit
+</code></pre></div></div>
+
+<h1 id="参考">参考</h1>
+
+<blockquote>
+  <p>https://gotgit.readthedocs.io/en/latest/04-git-model/070-git-svn.html</p>
+</blockquote>
+
+  </article>
+
+</div>
 
       </div>
     </div>
