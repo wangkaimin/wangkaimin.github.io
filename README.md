@@ -2,12 +2,17 @@
 这是我的个人记事本，使用Jekyll生成，采用默认主题，托管于Github Pages上面。
 
 ### 介绍
-1. 非_site文件托管在bitbucket.org中的私有库中。
-2. 并非所有.md文件是公开的，_posts中包含私人文档和允许公开的文档。
-3. 允许公开的文档，大都以2018-09-01文件名开头，会被jekyll build并生成html放置_site中。
-4. 私有文档不符合jekyll生成规则就行。
+* xxx.github.io中仅仅放html内容，即_site中的文件
 
-### 结构
+* jekyll的非_site文件全部托管在bitbucket.org中的私有库中
+
+* 由于个人习惯原因，并非所有.md文件是公开的，_posts中包含私人文档和公开文档
+
+* 允许公开的文档，大都以2018-09-01文件名开头，会被jekyll build并生成html放置_site中
+
+* 私有文档只要不符合jekyll生成规则就行
+
+### 目录结构
 - .gitignore
 - 404.html
 - Gemfile

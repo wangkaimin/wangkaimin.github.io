@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>掌握git：git tag 批量删除</title>
-  <meta name="description" content="删除以d_开头的tag">
+  <title>部署github page：整合disqus评论系统</title>
+  <meta name="description" content="  注册disqus.com  获取disqus代码  在_layouts中新建xxx.html，放置代码  如果想再page页加入评论，末尾加入{ % include xxx.html % }  在所有的post中加入评论，末尾加入{ % include xxx.html % }  如果想每个post中控制评论...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://github.wangkaimin.com/git/tag/2018/09/07/git-tag-delete.html">
+  <link rel="canonical" href="http://github.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html">
   <link rel="alternate" type="application/rss+xml" title="个人记事" href="http://github.wangkaimin.com/feed.xml" />
 </head>
 
@@ -61,17 +61,29 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">掌握git：git tag 批量删除</h1>
-    <p class="post-meta">2018-09-07</p>
+    <h1 class="post-title">部署github page：整合disqus评论系统</h1>
+    <p class="post-meta">2018-09-08</p>
   </header>
 
   <article class="post-content">
-    <h2 id="删除以d_开头的tag"><strong>删除以d_开头的tag</strong></h2>
+    <ol>
+  <li>注册disqus.com</li>
+  <li>获取disqus代码</li>
+  <li>在_layouts中新建xxx.html，放置代码</li>
+  <li>如果想再page页加入评论，末尾加入<code class="highlighter-rouge">{ % include xxx.html % }</code></li>
+  <li>在所有的post中加入评论，末尾加入<code class="highlighter-rouge">{ % include xxx.html % }</code></li>
+  <li>如果想每个post中控制评论展示，代码如下
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span> % <span class="k">if </span>page.comments % <span class="o">}</span>
+  <span class="o">{</span> % include xxx.html % <span class="o">}</span>
+<span class="o">{</span> % endif % <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>在想启用的post markdown文件中加入<code class="highlighter-rouge">comments: true</code></li>
+</ol>
 
-<h3 id="方法一git-tag-push-tagname">方法一：git tag push :<em>tagName</em></h3>
-<p><code class="highlighter-rouge">git show-ref --tag | awk '/\/d_/ {print ":"$2}' | xargs git push origin</code></p>
-<h3 id="方法二git-tag--d-tagname">方法二：git tag -d <em>tagName</em></h3>
-<p><code class="highlighter-rouge">git tag | grep ^d_ | xargs git tag -d</code></p>
+<blockquote>
+  <p>注意：去掉{和%之间的空格</p>
+</blockquote>
 
   </article>
 
