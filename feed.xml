@@ -4,15 +4,28 @@
     <title>个人记事</title>
     <description>这是我的个人记事本，使用Jekyll生成，采用默认主题，托管于Github Pages上面。
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Sep 2018 15:39:10 +0800</pubDate>
-    <lastBuildDate>Fri, 07 Sep 2018 15:39:10 +0800</lastBuildDate>
+    <link>http://github.wangkaimin.com/</link>
+    <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 07 Sep 2018 16:05:12 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Sep 2018 16:05:12 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
+        <title>精通linux命令 Ls</title>
+        <description>
+</description>
+        <pubDate>Fri, 07 Sep 2018 00:00:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/2018/09/07/%E7%B2%BE%E9%80%9ALinux%E5%91%BD%E4%BB%A4-ls.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/07/%E7%B2%BE%E9%80%9ALinux%E5%91%BD%E4%BB%A4-ls.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Markdown 简明教程</title>
-        <description>&lt;h2 id=&quot;1标题&quot;&gt;1、标题&lt;/h2&gt;
+        <description>&lt;h1 id=&quot;markdown简明教程&quot;&gt;Markdown简明教程&lt;/h1&gt;
+
+&lt;h2 id=&quot;1标题&quot;&gt;1、标题&lt;/h2&gt;
 
 &lt;p&gt;#一级标题&lt;/p&gt;
 
@@ -27,16 +40,19 @@
 &lt;p&gt;######六级标题&lt;/p&gt;
 
 &lt;h2 id=&quot;2加粗斜体&quot;&gt;2、加粗，斜体&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**加粗**
+*斜体*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**加粗**
-*斜体*
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;h1 id=&quot;3层次&quot;&gt;3、层次&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 1
+    * 1.1
+        * 1.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;1
@@ -50,14 +66,15 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 1
-    * 1.1
-        * 1.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;h1 id=&quot;4段落&quot;&gt;4、段落&lt;/h1&gt;
 
 &lt;h1 id=&quot;5列表&quot;&gt;5、列表&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 有序列表
+2. 有序列表
+
+- [ ] 任务列表
+- [x] 任务列表
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
   &lt;li&gt;有序列表&lt;/li&gt;
@@ -90,40 +107,43 @@
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
 &lt;h1 id=&quot;7代码块&quot;&gt;7、代码块&lt;/h1&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; “Hello world!”
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;​```shell
 echo “Hello world!”
 ​```
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; “Hello world!”
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h1 id=&quot;8公式块&quot;&gt;8、公式块&lt;/h1&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;x^2 + y^2 = z^2&lt;/script&gt;
-
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$$
 x^2 + y^2 = z^2
 $$
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x^2 + y^2 = z^2&lt;/script&gt;
+
 &lt;h1 id=&quot;6链接图片&quot;&gt;6、链接，图片&lt;/h1&gt;
 
-&lt;p&gt;头像&lt;img src=&quot;https://s.gravatar.com/avatar/49355866cac13a969e9f0043c7b2ad7d?s=80&quot; alt=&quot;avatar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;![avatar](https://s.gravatar.com/avatar/49355866cac13a969e9f0043c7b2ad7d?s=80)&lt;/code&gt;
+&lt;img src=&quot;https://s.gravatar.com/avatar/49355866cac13a969e9f0043c7b2ad7d?s=80&quot; alt=&quot;avatar&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://wp.wangkaimin.com&quot;&gt;我的博客超链接&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[我的博客超链接](https://wp.wangkaimin.com)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[我的博客超链接](https://wp.wangkaimin.com)&lt;/code&gt;
+&lt;a href=&quot;https://wp.wangkaimin.com&quot;&gt;我的博客超链接&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 05 Sep 2018 17:30:00 +0800</pubDate>
-        <link>http://localhost:4000/markdown/2018/09/05/markdown-info.html</link>
-        <guid isPermaLink="true">http://localhost:4000/markdown/2018/09/05/markdown-info.html</guid>
+        <link>http://github.wangkaimin.com/markdown/2018/09/05/markdown-info.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/markdown/2018/09/05/markdown-info.html</guid>
         
         
         <category>markdown</category>
