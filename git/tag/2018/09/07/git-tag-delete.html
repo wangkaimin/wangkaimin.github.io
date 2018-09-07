@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>掌握git：git tag 批量删除</title>
-  <meta name="description" content="tag push">
+  <meta name="description" content="删除以d_开头的tag">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://github.wangkaimin.com/git/tag/2018/09/07/git-tag-delete.html">
@@ -68,29 +68,12 @@
   </header>
 
   <article class="post-content">
-    <h2 id="tag-push">tag push</h2>
+    <h2 id="删除以d_开头的tag"><strong>删除以d_开头的tag</strong></h2>
 
-<table>
-  <tbody>
-    <tr>
-      <td>git show-ref –tag</td>
-      <td>awk ‘/\/d_/ {print “:”$2}’</td>
-      <td>xargs git push origin</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="删除以d_开头的tag">删除以d_开头的tag</h2>
-
-<table>
-  <tbody>
-    <tr>
-      <td>git tag</td>
-      <td>grep ^d_</td>
-      <td>xargs git tag -d</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="方法一git-tag-push-tagname">方法一：git tag push :<em>tagName</em></h3>
+<p><code class="highlighter-rouge">git show-ref --tag | awk '/\/d_/ {print ":"$2}' | xargs git push origin</code></p>
+<h3 id="方法二git-tag--d-tagname">方法二：git tag -d <em>tagName</em></h3>
+<p><code class="highlighter-rouge">git tag | grep ^d_ | xargs git tag -d</code></p>
 
   </article>
 
