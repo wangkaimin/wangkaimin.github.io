@@ -6,9 +6,192 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Sep 2018 22:28:32 +0800</pubDate>
-    <lastBuildDate>Sat, 08 Sep 2018 22:28:32 +0800</lastBuildDate>
+    <pubDate>Sun, 09 Sep 2018 23:52:52 +0800</pubDate>
+    <lastBuildDate>Sun, 09 Sep 2018 23:52:52 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>源码编译：ubuntu下编译mysql</title>
+        <description>&lt;h2 id=&quot;1下载源码&quot;&gt;1、下载源码：&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wget -c http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.31.tar.gz&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2解压&quot;&gt;2、解压&lt;/h2&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;zxf mysql-5.6.31.tar.gz
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;mysql-5.6.31
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3cmake&quot;&gt;3、cmake&lt;/h2&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;cmake
+cmake &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;因为缺少依赖，会报如下错误：第12行&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-- Running cmake version 2.8.12.2
+-- Could NOT find Git (missing:  GIT_EXECUTABLE)
+-- MySQL 5.6.31
+-- Packaging as: mysql-5.6.31-Linux-x86_64
+-- HAVE_VISIBILITY_HIDDEN
+-- HAVE_VISIBILITY_HIDDEN
+-- HAVE_VISIBILITY_HIDDEN
+-- Could NOT find Curses (missing:  CURSES_LIBRARY CURSES_INCLUDE_PATH)
+CMake Error at cmake/readline.cmake:85 (MESSAGE):
+  Curses library not found.  Please install appropriate package,
+ 
+      remove CMakeCache.txt and rerun cmake.On Debian/Ubuntu, package name is libncurses5-dev, on Redhat and derivates it is ncurses-devel.
+Call Stack (most recent call first):
+  cmake/readline.cmake:128 (FIND_CURSES)
+  cmake/readline.cmake:202 (MYSQL_USE_BUNDLED_EDITLINE)
+  CMakeLists.txt:421 (MYSQL_CHECK_EDITLINE)
+ 
+ 
+-- Configuring incomplete, errors occurred!
+See also &quot;/root/download/mysql-5.6.31/CMakeFiles/CMakeOutput.log&quot;.
+See also &quot;/root/download/mysql-5.6.31/CMakeFiles/CMakeError.log&quot;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;apt-get install git libncurses5-dev&lt;/code&gt;
+继续cmake&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm CMakeCache.txt
+cmake .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-- Running cmake version 2.8.12.2
+-- Found Git: /usr/bin/git (found version &quot;1.9.1&quot;)
+-- MySQL 5.6.31
+-- Packaging as: mysql-5.6.31-Linux-x86_64
+-- HAVE_VISIBILITY_HIDDEN
+-- HAVE_VISIBILITY_HIDDEN
+-- HAVE_VISIBILITY_HIDDEN
+-- Using cmake version 2.8.12.2
+-- Not building NDB
+-- Library mysqlclient depends on OSLIBS -lpthread;m;dl
+Warning: Bison executable not found in PATH
+-- Library mysqlserver depends on OSLIBS -lpthread;m;crypt;dl
+-- CMAKE_BUILD_TYPE: RelWithDebInfo
+-- COMPILE_DEFINITIONS: HAVE_CONFIG_H
+-- CMAKE_C_FLAGS:  -Wall -Wextra -Wformat-security -Wvla -Wwrite-strings -Wdeclaration
+-- CMAKE_CXX_FLAGS:  -Wall -Wextra -Wformat-security -Wvla -Woverloaded-virtual -Wno-u
+-- CMAKE_C_FLAGS_RELWITHDEBINFO: -O3 -g -fabi-version=2 -fno-omit-frame-pointer -fno-s
+-- CMAKE_CXX_FLAGS_RELWITHDEBINFO: -O3 -g -fabi-version=2 -fno-omit-frame-pointer -fno
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/download/mysql-5.6.31
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;消除11行的警告
+&lt;code class=&quot;highlighter-rouge&quot;&gt;apt-get install bison&lt;/code&gt;
+继续cmake，其实前面都是在探路，真正的cmake如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_DATADIR=/var/mysql/data \
+-DSYSCONFDIR=/etc \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_MEMORY_STORAGE_ENGINE=1 \
+-DWITH_READLINE=1 \
+-DMYSQL_UNIX_ADDR=/tmp/mysqld.sock \
+-DMYSQL_TCP_PORT=3306 \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_PARTITION_STORAGE_ENGINE=1 \
+-DEXTRA_CHARSETS=all \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DMYSQL_USER=mysql \
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;还是会有如下警告的：估计这三个参数不能使用，去掉即可&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CMake Warning:
+  Manually-specified variables were not used by the project:
+ 
+    MYSQL_USER
+    WITH_MEMORY_STORAGE_ENGINE
+    WITH_READLINE
+ 
+ 
+-- Build files have been written to: /root/download/mysql/mysql-5.6.31
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;注解：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake \
+# 安装路径 \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+# 数据库文件存放位置 \
+-DMYSQL_DATADIR=/var/mysql/data \
+# my.cnf路径 \
+-DSYSCONFDIR=/etc \
+# 分别支持MyIASM、InnoDB、Memory引擎 \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_MEMORY_STORAGE_ENGINE=1 \
+# 允许从本地导入数据 \
+-DWITH_READLINE=1 \
+# 监听socket路径 \
+-DMYSQL_UNIX_ADDR=/tmp/mysqld.sock \
+# 端口 \
+-DMYSQL_TCP_PORT=3306 \
+-DENABLED_LOCAL_INFILE=1 \
+# 支持数据库分区 \
+-DWITH_PARTITION_STORAGE_ENGINE=1 \
+# 安装所有的字符集 \
+-DEXTRA_CHARSETS=all \
+# 默认字符集 \
+-DDEFAULT_CHARSET=utf8 \
+# 设置服务器的排序规则 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+# \
+-DMYSQL_USER=mysql \
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;4各种设置编译安装非常重要&quot;&gt;4、各种设置、编译安装（非常重要）&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#用户、目录设置
+groupadd mysql
+useradd -g mysql mysql
+mkdir -p /var/mysql/
+mkdir -p /var/mysql/data/
+mkdir -p /var/mysql/log/
+ 
+#拥有者和群组设置
+#chmod +w /usr/local/mysql
+chown -R mysql:mysql /usr/local/mysql
+chown -R mysql:mysql /var/mysql/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make
+make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#ln -s /usr/local/mysql/lib/libmysqlclient.so.18 /usr/lib/libmysqlclient.so.18
+ 
+#copy默认配置
+cp support-files/my-default.cnf /etc/my.cnf
+cp support-files/mysql.server /etc/init.d/mysqld
+ 
+#MySQL初始化安装
+/usr/local/mysql/scripts/mysql_install_db --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql --datadir=/var/mysql/data --user=mysql
+ 
+#启动mysql
+service mysqld start
+ 
+#设置开机启动
+chmod +x /etc/init.d/mysqld
+update-rc.d /etc/init.d/mysqld defaults
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#设置PATH 增加 export PATH=$PATH:/usr/local/mysql/bin
+vim /etc/profile
+#使之生效
+source /etc/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;参考&quot;&gt;参考：&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.phpha.com/backup/archives/1685.html&quot;&gt;Ubuntu-14.04编译安装MySQL-5.6.16&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/wendi_0506/article/details/39478369&quot;&gt;Linux CentOS6.5下编译安装MySQL 5.6.16【给力详细教程】&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/zqtsx/article/details/9378703&quot;&gt;Linux源码安装mysql 5.6.12 （cmake编译）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 09 Sep 2018 23:30:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/mysql/2018/09/09/ompile-code-of-mysql.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/mysql/2018/09/09/ompile-code-of-mysql.html</guid>
+        
+        <category>mysql</category>
+        
+        
+        <category>mysql</category>
+        
+      </item>
     
       <item>
         <title>掌握git：git submodule使用</title>
@@ -181,83 +364,6 @@
         <link>http://github.wangkaimin.com/2018/09/07/spring-cloud-0.html</link>
         <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/07/spring-cloud-0.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>掌握git：git svn 使用流程</title>
-        <description>&lt;h1 id=&quot;git和svn协同模型&quot;&gt;Git和SVN协同模型&lt;/h1&gt;
-
-&lt;h2 id=&quot;1使用git-svn的一般流程&quot;&gt;1、使用git-svn的一般流程&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://gotgit.readthedocs.io/en/latest/_images/git-svn-workflow.png&quot; alt=&quot;git-svn工作流&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2具体操作流程&quot;&gt;2、具体操作流程&lt;/h2&gt;
-
-&lt;h3 id=&quot;a-clone&quot;&gt;a. clone&lt;/h3&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn clone &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; file:///path/to/svn/repos/demo git-svn-demo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;-s 指明仓库采⽤用标准svn仓库布局:trunk/branches/tags，⾮非标准布局可分别指定 trung/branches/tags，请查阅⽂文档( git help svn )&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;其中repo为仓库根⽬目录&lt;/li&gt;
-  &lt;li&gt;会将svn的每⼀一个提交转换为本地Git仓库中的提交&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;b-fetch&quot;&gt;b. fetch&lt;/h2&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn fetch
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;显然，由于Subversion版本库中包含了新的提交，导致执行&lt;strong&gt;git svn dcommit&lt;/strong&gt;出错。这时需执行&lt;strong&gt;git svn fetch&lt;/strong&gt;命令，以从Subversion版本库获取更新。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;c-rebase&quot;&gt;c. rebase&lt;/h2&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn rebase
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;当获取了新的Subversion提交之后，需要执行&lt;strong&gt;git svn rebase&lt;/strong&gt;将Git中未推送到Subversion的提交通过变基（rebase）形成包含Subversion最新提交的线性提交。这是因为Subversion的提交都是线性的。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;d-fix-conflict&quot;&gt;d. fix conflict&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;如果有冲突需要解决冲突&lt;/li&gt;
-  &lt;li&gt;When you have resolved this problem run “git rebase –continue”.&lt;/li&gt;
-  &lt;li&gt;If you would prefer to skip this patch, instead run “git rebase –skip”.&lt;/li&gt;
-  &lt;li&gt;To restore the original branch and stop rebasing run “git rebase –abort”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;e-continue&quot;&gt;e. continue&lt;/h2&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rebase &lt;span class=&quot;nt&quot;&gt;--continue&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;f-dcommit&quot;&gt;f. dcommit&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn dcommit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;参考&quot;&gt;参考&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;https://gotgit.readthedocs.io/en/latest/04-git-model/070-git-svn.html&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Thu, 06 Sep 2018 17:30:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/git/svn/2018/09/06/git-svn.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/git/svn/2018/09/06/git-svn.html</guid>
-        
-        <category>git</category>
-        
-        
-        <category>git</category>
-        
-        <category>svn</category>
         
       </item>
     
