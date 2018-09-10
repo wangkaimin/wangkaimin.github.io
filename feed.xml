@@ -6,9 +6,108 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Sep 2018 16:58:34 +0800</pubDate>
-    <lastBuildDate>Mon, 10 Sep 2018 16:58:34 +0800</lastBuildDate>
+    <pubDate>Mon, 10 Sep 2018 21:43:56 +0800</pubDate>
+    <lastBuildDate>Mon, 10 Sep 2018 21:43:56 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Nvm Node Npm Install</title>
+        <description>
+&lt;p&gt;https://npm.taobao.org/&lt;/p&gt;
+
+&lt;p&gt;国内优秀npm镜像推荐及使用
+npm全称Node Package Manager，是node.js的模块依赖管理工具。由于npm的源在国外，所以国内用户使用起来各种不方便。下面整理出了一部分国内优秀的npm镜像资源，国内用户可以选择使用。
+国内优秀npm镜像淘宝npm镜像
+	* 搜索地址：http://npm.taobao.org/
+	* registry地址：http://registry.npm.taobao.org/&lt;/p&gt;
+
+&lt;p&gt;cnpmjs镜像
+	* 搜索地址：http://cnpmjs.org/
+	* registry地址：http://r.cnpmjs.org/&lt;/p&gt;
+
+&lt;p&gt;如何使用
+有很多方法来配置npm的registry地址，下面根据不同情境列出几种比较常用的方法。以淘宝npm镜像举例：
+1.临时使用
+npm –registry https://registry.npm.taobao.org install express
+2.持久使用
+npm config set registry https://registry.npm.taobao.org&lt;/p&gt;
+
+&lt;p&gt;// 配置后可通过下面方式来验证是否成功
+npm config get registry
+// 或
+npm info express
+3.通过cnpm使用
+npm install -g cnpm –registry=https://registry.npm.taobao.org&lt;/p&gt;
+
+&lt;p&gt;// 使用
+cnpm install express&lt;/p&gt;
+
+&lt;p&gt;##
+root@wawa_p1:~# npm config get registry
+https://registry.npmjs.org/
+root@wawa_p1:~#&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;npm config set registry https://registry.npmjs.org/&lt;/p&gt;
+
+&lt;h2 id=&quot;安装-nodejs&quot;&gt;安装 Node.js&lt;/h2&gt;
+&lt;p&gt;安装 Node.js 的最佳方式是使用 nvm。&lt;/p&gt;
+
+&lt;p&gt;cURL:&lt;/p&gt;
+
+&lt;p&gt;$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+Wget:&lt;/p&gt;
+
+&lt;p&gt;$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+安装完成后，重启终端并执行下列命令即可安装 Node.js。&lt;/p&gt;
+
+&lt;p&gt;$ nvm install stable&lt;/p&gt;
+
+&lt;h2 id=&quot;npm-安装&quot;&gt;npm 安装&lt;/h2&gt;
+
+&lt;p&gt;第二种安装方法：&lt;/p&gt;
+
+&lt;p&gt;先安装，nvm，即是Node Version Manager(Node版本管理器)&lt;/p&gt;
+
+&lt;p&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+ 或者使用  wget&lt;/p&gt;
+
+&lt;p&gt;wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+之后需要激活nvm:&lt;/p&gt;
+
+&lt;p&gt;$ source ~/.nvm/nvm.sh
+激活完成后，安装node&lt;/p&gt;
+
+&lt;p&gt;nvm install node 
+安装完成后，切换到该版本&lt;/p&gt;
+
+&lt;p&gt;nvm use node&lt;/p&gt;
+
+&lt;h2 id=&quot;建立软连接&quot;&gt;建立软连接&lt;/h2&gt;
+&lt;h2 id=&quot;运行node项目时报错usrbinenv-node-no-such-file-or-directory&quot;&gt;运行node项目时报错：/usr/bin/env: node: No such file or directory&lt;/h2&gt;
+&lt;p&gt;ln -s /usr/bin/nodejs /usr/bin/node&lt;/p&gt;
+
+&lt;h2 id=&quot;查看版本&quot;&gt;查看版本&lt;/h2&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+npm &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 升级npm&lt;/span&gt;
+npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;npm@latest &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;参考：&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/2018/09/10/nvm-node-npm-install.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/10/nvm-node-npm-install.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>部署github page：使用jekyll admin</title>
@@ -123,11 +222,13 @@ bundle install
   &lt;li&gt;引用的js和css并没有压缩，为了提高速度可以使用在线工具压缩，放在自己网站的静态资源里&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;参考&quot;&gt;&lt;strong&gt;参考&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jacobpan3g.github.io/cn/2017/07/17/gitment-in-jekyll/&quot;&gt;在Jekyll博客添加评论系统：gitment篇&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.ingphone.com/jekyll/2015/01/28/jekyll-tips.html&quot;&gt;jekyll小技巧&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;参考&quot;&gt;&lt;strong&gt;参考&lt;/strong&gt;&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://jacobpan3g.github.io/cn/2017/07/17/gitment-in-jekyll/&quot;&gt;在Jekyll博客添加评论系统：gitment篇&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://blog.ingphone.com/jekyll/2015/01/28/jekyll-tips.html&quot;&gt;jekyll小技巧&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
         <link>http://github.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html</link>
@@ -434,23 +535,6 @@ source /etc/profile
         <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
         <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-ifconfig.html</link>
         <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-ifconfig.html</guid>
-        
-        <category>linux</category>
-        
-        
-        <category>linux</category>
-        
-        <category>shell</category>
-        
-      </item>
-    
-      <item>
-        <title>掌握linux命令：cd</title>
-        <description>
-</description>
-        <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-cd.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-cd.html</guid>
         
         <category>linux</category>
         

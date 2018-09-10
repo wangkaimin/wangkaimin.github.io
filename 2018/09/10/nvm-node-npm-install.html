@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>部署github page：jekyll评论整合gitment</title>
-  <meta name="description" content="本文介绍了整合gitment作为评论系统。">
+  <title>Nvm Node Npm Install</title>
+  <meta name="description" content="https://npm.taobao.org/国内优秀npm镜像推荐及使用npm全称Node Package Manager，是node.js的模块依赖管理工具。由于npm的源在国外，所以国内用户使用起来各种不方便。下面整理出了一部分国内优秀的npm镜像资源，国内用户可以选择使用。国内优秀npm镜像淘宝npm镜像...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://github.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html">
+  <link rel="canonical" href="http://github.wangkaimin.com/2018/09/10/nvm-node-npm-install.html">
   <link rel="alternate" type="application/rss+xml" title="个人笔记本" href="http://github.wangkaimin.com/feed.xml" />
 </head>
 
@@ -65,95 +65,98 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">部署github page：jekyll评论整合gitment</h1>
+    <h1 class="post-title">Nvm Node Npm Install</h1>
     <p class="post-meta">2018-09-10</p>
   </header>
 
   <article class="post-content">
-    <p>本文介绍了整合gitment作为评论系统。
-<!--more--></p>
-<h2 id="1-申请一个github-oauth-application">1. 申请一个Github OAuth Application</h2>
-<p>Github头像下拉菜单 &gt; Settings &gt; 左边Developer settings下的OAuth Application &gt; Register a new application，填写相关信息。</p>
+    
+<p>https://npm.taobao.org/</p>
 
-<ul>
-  <li>Application name, Homepage URL, Application description, 根据实际情况填写</li>
-  <li>Authorization callback URL 一定要写自己Github Pages的URL
-    <ul>
-      <li>要么是xxx.github.com或者xxx.github.io，要么是自定义域名</li>
-      <li>这里我的是自定义域名：github.wangkaimin.com</li>
-    </ul>
-  </li>
-  <li>填写完上述信息后按Register application按钮，得到Client ID和Client Secret</li>
-</ul>
+<p>国内优秀npm镜像推荐及使用
+npm全称Node Package Manager，是node.js的模块依赖管理工具。由于npm的源在国外，所以国内用户使用起来各种不方便。下面整理出了一部分国内优秀的npm镜像资源，国内用户可以选择使用。
+国内优秀npm镜像淘宝npm镜像
+	* 搜索地址：http://npm.taobao.org/
+	* registry地址：http://registry.npm.taobao.org/</p>
 
-<h2 id="2-在jekyll博客调用gitment">2. 在jekyll博客调用gitment</h2>
-<p>1、为了统一目录结构，在_includes目录下创建gitment.html</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"gitmentContainer"</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://imsun.github.io/gitment/style/default.css"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-    <span class="kd">var</span> <span class="nx">gitment</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gitment</span><span class="p">({</span>
-        <span class="na">id</span><span class="p">:</span> <span class="s1">'{{ page.url }}'</span><span class="p">,</span>
-        <span class="na">owner</span><span class="p">:</span> <span class="s1">'{{ site.data.github.userName }}'</span><span class="p">,</span>
-        <span class="na">repo</span><span class="p">:</span> <span class="s1">'{{ site.data.github.repo }}'</span><span class="p">,</span>
-        <span class="na">oauth</span><span class="p">:</span> <span class="p">{</span>
-            <span class="na">client_id</span><span class="p">:</span> <span class="s1">'{{ site.data.github.clientId }}'</span><span class="p">,</span>
-            <span class="na">client_secret</span><span class="p">:</span> <span class="s1">'{{ site.data.github.clientSecret }}'</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">});</span>
-    <span class="nx">gitment</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'gitmentContainer'</span><span class="p">);</span>
-<span class="nt">&lt;/script&gt;</span>
+<p>cnpmjs镜像
+	* 搜索地址：http://cnpmjs.org/
+	* registry地址：http://r.cnpmjs.org/</p>
 
+<p>如何使用
+有很多方法来配置npm的registry地址，下面根据不同情境列出几种比较常用的方法。以淘宝npm镜像举例：
+1.临时使用
+npm –registry https://registry.npm.taobao.org install express
+2.持久使用
+npm config set registry https://registry.npm.taobao.org</p>
+
+<p>// 配置后可通过下面方式来验证是否成功
+npm config get registry
+// 或
+npm info express
+3.通过cnpm使用
+npm install -g cnpm –registry=https://registry.npm.taobao.org</p>
+
+<p>// 使用
+cnpm install express</p>
+
+<p>##
+root@wawa_p1:~# npm config get registry
+https://registry.npmjs.org/
+root@wawa_p1:~#</p>
+
+<p>##</p>
+
+<p>npm config set registry https://registry.npmjs.org/</p>
+
+<h2 id="安装-nodejs">安装 Node.js</h2>
+<p>安装 Node.js 的最佳方式是使用 nvm。</p>
+
+<p>cURL:</p>
+
+<p>$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+Wget:</p>
+
+<p>$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+安装完成后，重启终端并执行下列命令即可安装 Node.js。</p>
+
+<p>$ nvm install stable</p>
+
+<h2 id="npm-安装">npm 安装</h2>
+
+<p>第二种安装方法：</p>
+
+<p>先安装，nvm，即是Node Version Manager(Node版本管理器)</p>
+
+<p>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+ 或者使用  wget</p>
+
+<p>wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+之后需要激活nvm:</p>
+
+<p>$ source ~/.nvm/nvm.sh
+激活完成后，安装node</p>
+
+<p>nvm install node 
+安装完成后，切换到该版本</p>
+
+<p>nvm use node</p>
+
+<h2 id="建立软连接">建立软连接</h2>
+<h2 id="运行node项目时报错usrbinenv-node-no-such-file-or-directory">运行node项目时报错：/usr/bin/env: node: No such file or directory</h2>
+<p>ln -s /usr/bin/nodejs /usr/bin/node</p>
+
+<h2 id="查看版本">查看版本</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">-v</span>
+npm <span class="nt">-v</span>
+<span class="c"># 升级npm</span>
+npm <span class="nb">install </span>npm@latest <span class="nt">-g</span>
 </code></pre></div></div>
-<p>2、注意我这里使用了jekyll提供的全局变量的使用方法，_data目录下创建github.yml</p>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">userName</span><span class="pi">:</span> <span class="s">Your GitHub username</span>
-<span class="na">repo</span><span class="pi">:</span> <span class="s">The repo to store comments</span>
-<span class="na">clientId</span><span class="pi">:</span> <span class="s">Your client ID</span>
-<span class="na">clientSecret</span><span class="pi">:</span> <span class="s">Your client secret</span>
-</code></pre></div></div>
-
-<p>3、其实这些变量直接放在gitment.html也可以的</p>
-
-<p>4、在_layouts中的page.html和post.html末尾增加</p>
-<pre><code class="language-jekyll">
-{% include gitment.html %}
-
-</code></pre>
-
-<p>5、其实也可以通过变量控制的，这里我整合了disqus，changyan，gitment，在文章中通过变量控制</p>
-<pre><code class="language-jekyll">## 注意是elsif，而不是elseif或else if
-
-{% if page.comment.disqus %}
-  {% include disqus.html %}
-
-{% elsif page.comment.chanyang %}
-  {% include changyan.html %}
-
-{% elsif page.comment.gitment %}
-  {% include gitment.html %}
-
-{% else page.comment.gitment %}
-  {% include gitment.html %}
-{% endif %}
-
-</code></pre>
-
-<h2 id="3-为每篇博文初始化评论系统">3. 为每篇博文初始化评论系统</h2>
-<p>点击<code class="highlighter-rouge">Initialize Comments</code>按钮后，就可以开始对该篇博文开始评论了， 同时也可以在对应的github仓库看到相应的issue。</p>
-
-<h2 id="注意"><strong>注意</strong></h2>
-<ul>
-  <li>一个一个手动初始化确实很麻烦，如果能自动初始化就完美了</li>
-  <li>注意gitment的id的长度限制，会报”Error：validation failed”错误，所以这里没有使用默认的，而是使用的了page.url</li>
-  <li>引用的js和css并没有压缩，为了提高速度可以使用在线工具压缩，放在自己网站的静态资源里</li>
-</ul>
 
 <blockquote>
-  <h2 id="参考"><strong>参考</strong></h2>
+  <p>参考：</p>
   <ul>
-    <li><a href="https://jacobpan3g.github.io/cn/2017/07/17/gitment-in-jekyll/">在Jekyll博客添加评论系统：gitment篇</a></li>
-    <li><a href="http://blog.ingphone.com/jekyll/2015/01/28/jekyll-tips.html">jekyll小技巧</a></li>
+    <li><a href=""></a></li>
   </ul>
 </blockquote>
 
@@ -167,7 +170,7 @@
 <script src="https://github.wangkaimin.com/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        id: '/2018/09/10/github-page-jekyll-gitment.html',
+        id: '/2018/09/10/nvm-node-npm-install.html',
         owner: 'kaiminwang',
         repo: 'gitment',
         oauth: {
