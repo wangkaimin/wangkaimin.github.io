@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>关于我</title>
-  <meta name="description" content="">
+  <title>部署github page : 使用jekyll admin</title>
+  <meta name="description" content="本文介绍如何使用Jekyll admin。">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://github.wangkaimin.com/about/">
+  <link rel="canonical" href="http://github.wangkaimin.com/2018/09/10/install-jekyll-admin.html">
   <link rel="alternate" type="application/rss+xml" title="个人笔记本" href="http://github.wangkaimin.com/feed.xml" />
 </head>
 
@@ -61,25 +61,37 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">关于我</h1>
+    <h1 class="post-title">部署github page : 使用jekyll admin</h1>
+    <p class="post-meta">2018-09-10</p>
   </header>
 
   <article class="post-content">
-    <ul>
-  <li>2018年7月至今就职于搜狗</li>
-  <li>2015年6月-2018年6月工作于阿吉比科技有限公司（RGBVR）
-    <ul>
-      <li>小花秀VR直播</li>
-      <li>欢乐抓娃娃</li>
-    </ul>
-  </li>
-  <li>2015年毕业于中国科学技术大学（USTC）</li>
-  <li>2008年毕业于东北林业大学（NEFU）</li>
-</ul>
+    <p>本文介绍如何使用Jekyll admin。
+<!--more--></p>
+<h2 id="在_config中增加">在_config中增加：</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins:
+  - jekyll-feed
+  - jekyll-admin
+  - jekyll-gist
+</code></pre></div></div>
+<h2 id="在gemfile中增加">在Gemfile中增加：</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :jekyll_plugins do
+  gem "jekyll-feed", "~&gt; 0.6"
+  gem 'jekyll-admin'
+  gem 'jekyll-gist'
+end
+</code></pre></div></div>
+
+<h2 id="安装">安装</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll-admin
+bundle install
+</code></pre></div></div>
 
   </article>
 
 </div>
+
+<!---->
 
 <!--<div id="disqus_thread"></div>
 <script>
@@ -103,7 +115,7 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>-->
 
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="/about/" ></div>
+<div id="SOHUCS" sid="/2018/09/10/install-jekyll-admin.html" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytOe9ekU';
@@ -111,7 +123,6 @@
         var width = window.innerWidth || document.documentElement.clientWidth;
         if (width < 960) {
             window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-
       </div>
     </div>
 
