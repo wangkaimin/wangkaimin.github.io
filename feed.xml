@@ -6,8 +6,8 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Sep 2018 15:28:27 +0800</pubDate>
-    <lastBuildDate>Mon, 10 Sep 2018 15:28:27 +0800</lastBuildDate>
+    <pubDate>Mon, 10 Sep 2018 15:45:39 +0800</pubDate>
+    <lastBuildDate>Mon, 10 Sep 2018 15:45:39 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -44,7 +44,8 @@ bundle install
     
       <item>
         <title>部署github page：jekyll评论整合gitment</title>
-        <description>&lt;!--more--&gt;
+        <description>&lt;p&gt;本文介绍了整合gitment作为评论系统，
+&lt;!--more--&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-申请一个github-oauth-application&quot;&gt;1. 申请一个Github OAuth Application&lt;/h2&gt;
 &lt;p&gt;Github头像下拉菜单 &amp;gt; Settings &amp;gt; 左边Developer settings下的OAuth Application &amp;gt; Register a new application，填写相关信息。&lt;/p&gt;
 
@@ -61,41 +62,41 @@ bundle install
 
 &lt;h2 id=&quot;2-在jekyll博客调用gitment&quot;&gt;2. 在jekyll博客调用gitment&lt;/h2&gt;
 &lt;p&gt;1、为了统一目录结构，在_includes目录下创建gitment.html&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;lt;div &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;gitmentContainer&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&amp;lt;/div&amp;gt;
-&amp;lt;&lt;span class=&quot;nb&quot;&gt;link &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://imsun.github.io/gitment/style/default.css&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&amp;lt;script &lt;span class=&quot;nv&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://imsun.github.io/gitment/dist/gitment.browser.js&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;
-    var gitment &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new Gitment&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'{{ page.url }}'&lt;/span&gt;,
-        owner: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.userName }}'&lt;/span&gt;,
-        repo: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.repo }}'&lt;/span&gt;,
-        oauth: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            client_id: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.clientId }}'&lt;/span&gt;,
-            client_secret: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.clientSecret }}'&lt;/span&gt;,
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-    &lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    gitment.render&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gitmentContainer'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&amp;lt;/script&amp;gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;gitmentContainer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://imsun.github.io/gitment/style/default.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://imsun.github.io/gitment/dist/gitment.browser.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gitment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Gitment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{{ page.url }}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.userName }}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.repo }}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;oauth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;client_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.clientId }}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;client_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.clientSecret }}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;gitment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gitmentContainer'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;2、注意我这里使用了jekyll提供的全局变量，_data目录下创建github.yml&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-jshelllanguage&quot;&gt;userName: Your GitHub username
-repo: The repo to store comments
-clientId: Your client ID
-clientSecret: Your client secret
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、注意我这里使用了jekyll提供的全局变量的使用方法，_data目录下创建github.yml&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;userName&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Your GitHub username&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;The repo to store comments&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;clientId&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Your client ID&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;clientSecret&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Your client secret&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;3、其实这些变量直接放在gitment.html也可以的&lt;/p&gt;
 
 &lt;p&gt;4、在_layouts中的page.html和post.html末尾增加&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jekyll&quot;&gt;
 {% include gitment.html %}
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;5、其实也可以通过变量控制的，这里我整合了disqus，changyan，gitment，在文章中通过变量控制&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## 注意是elsif，而不是elseif或else if
+&lt;pre&gt;&lt;code class=&quot;language-jekyll&quot;&gt;## 注意是elsif，而不是elseif或else if
 
 {% if page.comment.disqus %}
   {% include disqus.html %}
@@ -110,7 +111,7 @@ clientSecret: Your client secret
   {% include gitment.html %}
 {% endif %}
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;3-为每篇博文初始化评论系统&quot;&gt;3. 为每篇博文初始化评论系统&lt;/h2&gt;
 &lt;p&gt;点击&lt;code class=&quot;highlighter-rouge&quot;&gt;Initialize Comments&lt;/code&gt;按钮后，就可以开始对该篇博文开始评论了， 同时也可以在对应的github仓库看到相应的issue。&lt;/p&gt;
@@ -118,6 +119,7 @@ clientSecret: Your client secret
 &lt;h2 id=&quot;注意&quot;&gt;&lt;strong&gt;注意&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;一个一个手动初始化确实很麻烦，如果能自动初始化就完美了&lt;/li&gt;
+  &lt;li&gt;注意gitment的id的长度限制，会报”Error：validation failed”错误，所以这里没有使用默认的，而是使用的了page.url&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;参考&quot;&gt;&lt;strong&gt;参考&lt;/strong&gt;&lt;/h2&gt;

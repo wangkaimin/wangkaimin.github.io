@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>部署github page：jekyll评论整合gitment</title>
-  <meta name="description" content="">
+  <meta name="description" content="本文介绍了整合gitment作为评论系统，">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://github.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html">
@@ -70,7 +70,8 @@
   </header>
 
   <article class="post-content">
-    <!--more-->
+    <p>本文介绍了整合gitment作为评论系统，
+<!--more--></p>
 <h2 id="1-申请一个github-oauth-application">1. 申请一个Github OAuth Application</h2>
 <p>Github头像下拉菜单 &gt; Settings &gt; 左边Developer settings下的OAuth Application &gt; Register a new application，填写相关信息。</p>
 
@@ -87,41 +88,41 @@
 
 <h2 id="2-在jekyll博客调用gitment">2. 在jekyll博客调用gitment</h2>
 <p>1、为了统一目录结构，在_includes目录下创建gitment.html</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-&lt;div <span class="nb">id</span><span class="o">=</span><span class="s2">"gitmentContainer"</span><span class="o">&gt;</span>&lt;/div&gt;
-&lt;<span class="nb">link </span><span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="nv">href</span><span class="o">=</span><span class="s2">"https://imsun.github.io/gitment/style/default.css"</span><span class="o">&gt;</span>
-&lt;script <span class="nv">src</span><span class="o">=</span><span class="s2">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span><span class="o">&gt;</span>&lt;/script&gt;
-&lt;script&gt;
-    var gitment <span class="o">=</span> new Gitment<span class="o">({</span>
-        <span class="nb">id</span>: <span class="s1">'{{ page.url }}'</span>,
-        owner: <span class="s1">'{{ site.data.github.userName }}'</span>,
-        repo: <span class="s1">'{{ site.data.github.repo }}'</span>,
-        oauth: <span class="o">{</span>
-            client_id: <span class="s1">'{{ site.data.github.clientId }}'</span>,
-            client_secret: <span class="s1">'{{ site.data.github.clientSecret }}'</span>,
-        <span class="o">}</span>,
-    <span class="o">})</span><span class="p">;</span>
-    gitment.render<span class="o">(</span><span class="s1">'gitmentContainer'</span><span class="o">)</span><span class="p">;</span>
-&lt;/script&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"gitmentContainer"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://imsun.github.io/gitment/style/default.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="kd">var</span> <span class="nx">gitment</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gitment</span><span class="p">({</span>
+        <span class="na">id</span><span class="p">:</span> <span class="s1">'{{ page.url }}'</span><span class="p">,</span>
+        <span class="na">owner</span><span class="p">:</span> <span class="s1">'{{ site.data.github.userName }}'</span><span class="p">,</span>
+        <span class="na">repo</span><span class="p">:</span> <span class="s1">'{{ site.data.github.repo }}'</span><span class="p">,</span>
+        <span class="na">oauth</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">client_id</span><span class="p">:</span> <span class="s1">'{{ site.data.github.clientId }}'</span><span class="p">,</span>
+            <span class="na">client_secret</span><span class="p">:</span> <span class="s1">'{{ site.data.github.clientSecret }}'</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">});</span>
+    <span class="nx">gitment</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'gitmentContainer'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
 
 </code></pre></div></div>
-<p>2、注意我这里使用了jekyll提供的全局变量，_data目录下创建github.yml</p>
-<pre><code class="language-jshelllanguage">userName: Your GitHub username
-repo: The repo to store comments
-clientId: Your client ID
-clientSecret: Your client secret
-</code></pre>
+<p>2、注意我这里使用了jekyll提供的全局变量的使用方法，_data目录下创建github.yml</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">userName</span><span class="pi">:</span> <span class="s">Your GitHub username</span>
+<span class="na">repo</span><span class="pi">:</span> <span class="s">The repo to store comments</span>
+<span class="na">clientId</span><span class="pi">:</span> <span class="s">Your client ID</span>
+<span class="na">clientSecret</span><span class="pi">:</span> <span class="s">Your client secret</span>
+</code></pre></div></div>
 
 <p>3、其实这些变量直接放在gitment.html也可以的</p>
 
 <p>4、在_layouts中的page.html和post.html末尾增加</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<pre><code class="language-jekyll">
 {% include gitment.html %}
 
-</code></pre></div></div>
+</code></pre>
 
 <p>5、其实也可以通过变量控制的，这里我整合了disqus，changyan，gitment，在文章中通过变量控制</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 注意是elsif，而不是elseif或else if
+<pre><code class="language-jekyll">## 注意是elsif，而不是elseif或else if
 
 {% if page.comment.disqus %}
   {% include disqus.html %}
@@ -136,7 +137,7 @@ clientSecret: Your client secret
   {% include gitment.html %}
 {% endif %}
 
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="3-为每篇博文初始化评论系统">3. 为每篇博文初始化评论系统</h2>
 <p>点击<code class="highlighter-rouge">Initialize Comments</code>按钮后，就可以开始对该篇博文开始评论了， 同时也可以在对应的github仓库看到相应的issue。</p>
@@ -144,6 +145,7 @@ clientSecret: Your client secret
 <h2 id="注意"><strong>注意</strong></h2>
 <ul>
   <li>一个一个手动初始化确实很麻烦，如果能自动初始化就完美了</li>
+  <li>注意gitment的id的长度限制，会报”Error：validation failed”错误，所以这里没有使用默认的，而是使用的了page.url</li>
 </ul>
 
 <h2 id="参考"><strong>参考</strong></h2>
