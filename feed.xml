@@ -6,8 +6,8 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Sep 2018 14:05:03 +0800</pubDate>
-    <lastBuildDate>Mon, 10 Sep 2018 14:05:03 +0800</lastBuildDate>
+    <pubDate>Mon, 10 Sep 2018 15:28:27 +0800</pubDate>
+    <lastBuildDate>Mon, 10 Sep 2018 15:28:27 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -38,6 +38,97 @@ bundle install
         <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/10/install-jekyll-admin.html</guid>
         
         <category>jekyll</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>部署github page：jekyll评论整合gitment</title>
+        <description>&lt;!--more--&gt;
+&lt;h2 id=&quot;1-申请一个github-oauth-application&quot;&gt;1. 申请一个Github OAuth Application&lt;/h2&gt;
+&lt;p&gt;Github头像下拉菜单 &amp;gt; Settings &amp;gt; 左边Developer settings下的OAuth Application &amp;gt; Register a new application，填写相关信息。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Application name, Homepage URL, Application description, 根据实际情况填写&lt;/li&gt;
+  &lt;li&gt;Authorization callback URL 一定要写自己Github Pages的URL
+    &lt;ul&gt;
+      &lt;li&gt;要么是xxx.github.com或者xxx.github.io，要么是自定义域名&lt;/li&gt;
+      &lt;li&gt;这里我的是自定义域名：github.wangkaimin.com&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;填写完上述信息后按Register application按钮，得到Client ID和Client Secret&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-在jekyll博客调用gitment&quot;&gt;2. 在jekyll博客调用gitment&lt;/h2&gt;
+&lt;p&gt;1、为了统一目录结构，在_includes目录下创建gitment.html&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;lt;div &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;gitmentContainer&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&amp;lt;/div&amp;gt;
+&amp;lt;&lt;span class=&quot;nb&quot;&gt;link &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://imsun.github.io/gitment/style/default.css&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&amp;lt;script &lt;span class=&quot;nv&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://imsun.github.io/gitment/dist/gitment.browser.js&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+    var gitment &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new Gitment&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'{{ page.url }}'&lt;/span&gt;,
+        owner: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.userName }}'&lt;/span&gt;,
+        repo: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.repo }}'&lt;/span&gt;,
+        oauth: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            client_id: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.clientId }}'&lt;/span&gt;,
+            client_secret: &lt;span class=&quot;s1&quot;&gt;'{{ site.data.github.clientSecret }}'&lt;/span&gt;,
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+    &lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    gitment.render&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gitmentContainer'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&amp;lt;/script&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2、注意我这里使用了jekyll提供的全局变量，_data目录下创建github.yml&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jshelllanguage&quot;&gt;userName: Your GitHub username
+repo: The repo to store comments
+clientId: Your client ID
+clientSecret: Your client secret
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3、其实这些变量直接放在gitment.html也可以的&lt;/p&gt;
+
+&lt;p&gt;4、在_layouts中的page.html和post.html末尾增加&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+{% include gitment.html %}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;5、其实也可以通过变量控制的，这里我整合了disqus，changyan，gitment，在文章中通过变量控制&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## 注意是elsif，而不是elseif或else if
+
+{% if page.comment.disqus %}
+  {% include disqus.html %}
+
+{% elsif page.comment.chanyang %}
+  {% include changyan.html %}
+
+{% elsif page.comment.gitment %}
+  {% include gitment.html %}
+
+{% else page.comment.gitment %}
+  {% include gitment.html %}
+{% endif %}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-为每篇博文初始化评论系统&quot;&gt;3. 为每篇博文初始化评论系统&lt;/h2&gt;
+&lt;p&gt;点击&lt;code class=&quot;highlighter-rouge&quot;&gt;Initialize Comments&lt;/code&gt;按钮后，就可以开始对该篇博文开始评论了， 同时也可以在对应的github仓库看到相应的issue。&lt;/p&gt;
+
+&lt;h2 id=&quot;注意&quot;&gt;&lt;strong&gt;注意&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;一个一个手动初始化确实很麻烦，如果能自动初始化就完美了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;参考&quot;&gt;&lt;strong&gt;参考&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jacobpan3g.github.io/cn/2017/07/17/gitment-in-jekyll/&quot;&gt;在Jekyll博客添加评论系统：gitment篇&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.ingphone.com/jekyll/2015/01/28/jekyll-tips.html&quot;&gt;jekyll小技巧&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html</guid>
         
         
       </item>
@@ -256,20 +347,18 @@ source /etc/profile
   &lt;li&gt;注册disqus.com&lt;/li&gt;
   &lt;li&gt;获取disqus代码&lt;/li&gt;
   &lt;li&gt;在_layouts中新建xxx.html，放置代码&lt;/li&gt;
-  &lt;li&gt;如果想再page页加入评论，末尾加入&lt;code class=&quot;highlighter-rouge&quot;&gt;{ % include xxx.html % }&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;在所有的post中加入评论，末尾加入&lt;code class=&quot;highlighter-rouge&quot;&gt;{ % include xxx.html % }&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;如果想每个post中控制评论展示，代码如下
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; % &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;page.comments % &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; % include xxx.html % &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; % endif % &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
+  &lt;li&gt;如果想再page页加入评论，末尾加入&lt;code class=&quot;highlighter-rouge&quot;&gt;{% include xxx.html %}&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;在所有的post中加入评论，末尾加入&lt;code class=&quot;highlighter-rouge&quot;&gt;{% include xxx.html %}&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;如果想每个post中控制评论展示，需要添加变量&lt;/li&gt;
   &lt;li&gt;在想启用的post markdown文件中加入&lt;code class=&quot;highlighter-rouge&quot;&gt;comments: true&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;注意：去掉{和%之间的空格&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;page.comments %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% include xxx.html %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% endif %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Sat, 08 Sep 2018 00:00:00 +0800</pubDate>
         <link>http://github.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html</link>
@@ -366,28 +455,6 @@ source /etc/profile
         <category>linux</category>
         
         <category>shell</category>
-        
-      </item>
-    
-      <item>
-        <title>掌握git：git tag 批量删除</title>
-        <description>&lt;h2 id=&quot;删除以d_开头的tag&quot;&gt;&lt;strong&gt;删除以d_开头的tag&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;方法一git-tag-push-tagname&quot;&gt;方法一：git tag push :&lt;em&gt;tagName&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git show-ref --tag | awk '/\/d_/ {print &quot;:&quot;$2}' | xargs git push origin&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&quot;方法二git-tag--d-tagname&quot;&gt;方法二：git tag -d &lt;em&gt;tagName&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git tag | grep ^d_ | xargs git tag -d&lt;/code&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/git/tag/2018/09/07/git-tag-delete.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/git/tag/2018/09/07/git-tag-delete.html</guid>
-        
-        <category>git</category>
-        
-        
-        <category>git</category>
-        
-        <category>tag</category>
         
       </item>
     

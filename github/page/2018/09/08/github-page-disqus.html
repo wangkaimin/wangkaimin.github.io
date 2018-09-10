@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>部署github page：jekyll整合disqus评论系统</title>
-  <meta name="description" content="  注册disqus.com  获取disqus代码  在_layouts中新建xxx.html，放置代码  如果想再page页加入评论，末尾加入{ % include xxx.html % }  在所有的post中加入评论，末尾加入{ % include xxx.html % }  如果想每个post中控制评论...">
+  <meta name="description" content="  注册disqus.com  获取disqus代码  在_layouts中新建xxx.html，放置代码  如果想再page页加入评论，末尾加入{% include xxx.html %}  在所有的post中加入评论，末尾加入{% include xxx.html %}  如果想每个post中控制评论展示，需...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://github.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html">
@@ -74,42 +74,45 @@
   <li>注册disqus.com</li>
   <li>获取disqus代码</li>
   <li>在_layouts中新建xxx.html，放置代码</li>
-  <li>如果想再page页加入评论，末尾加入<code class="highlighter-rouge">{ % include xxx.html % }</code></li>
-  <li>在所有的post中加入评论，末尾加入<code class="highlighter-rouge">{ % include xxx.html % }</code></li>
-  <li>如果想每个post中控制评论展示，代码如下
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span> % <span class="k">if </span>page.comments % <span class="o">}</span>
-  <span class="o">{</span> % include xxx.html % <span class="o">}</span>
-<span class="o">{</span> % endif % <span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
+  <li>如果想再page页加入评论，末尾加入<code class="highlighter-rouge">{% include xxx.html %}</code></li>
+  <li>在所有的post中加入评论，末尾加入<code class="highlighter-rouge">{% include xxx.html %}</code></li>
+  <li>如果想每个post中控制评论展示，需要添加变量</li>
   <li>在想启用的post markdown文件中加入<code class="highlighter-rouge">comments: true</code></li>
 </ol>
 
-<blockquote>
-  <p>注意：去掉{和%之间的空格</p>
-</blockquote>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">{</span>% <span class="k">if </span>page.comments %<span class="o">}</span>
+  <span class="o">{</span>% include xxx.html %<span class="o">}</span>
+<span class="o">{</span>% endif %<span class="o">}</span>
+
+</code></pre></div></div>
 
   </article>
 
 </div>
 
-<!---->
 
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <div id="disqus_thread"></div>
 <script>
-    var gitment = new Gitment({
-        id: '/github/page/2018/09/08/github-page-disqus.html',
-        owner: 'wangkaimin',
-        repo: 'wangkaimin.github.io',
-        oauth: {
-            client_id: 'ba8d9d2c5aca4e9b9f65',
-            client_secret: 'b1b64e1302a1aea61e78e8a79a0c3b7b9b9225c0',
-        },
-    });
-    gitment.render('gitmentContainer');
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://github-wangkaimin-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
       </div>
     </div>
 
