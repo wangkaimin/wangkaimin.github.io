@@ -6,8 +6,8 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Sep 2018 15:45:39 +0800</pubDate>
-    <lastBuildDate>Mon, 10 Sep 2018 15:45:39 +0800</lastBuildDate>
+    <pubDate>Mon, 10 Sep 2018 16:16:33 +0800</pubDate>
+    <lastBuildDate>Mon, 10 Sep 2018 16:16:33 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -44,7 +44,7 @@ bundle install
     
       <item>
         <title>部署github page：jekyll评论整合gitment</title>
-        <description>&lt;p&gt;本文介绍了整合gitment作为评论系统，
+        <description>&lt;p&gt;本文介绍了整合gitment作为评论系统。
 &lt;!--more--&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-申请一个github-oauth-application&quot;&gt;1. 申请一个Github OAuth Application&lt;/h2&gt;
 &lt;p&gt;Github头像下拉菜单 &amp;gt; Settings &amp;gt; 左边Developer settings下的OAuth Application &amp;gt; Register a new application，填写相关信息。&lt;/p&gt;
@@ -64,8 +64,8 @@ bundle install
 &lt;p&gt;1、为了统一目录结构，在_includes目录下创建gitment.html&lt;/p&gt;
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;gitmentContainer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://imsun.github.io/gitment/style/default.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://imsun.github.io/gitment/dist/gitment.browser.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://github.wangkaimin.com/gitment/style/default.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://github.wangkaimin.com/gitment/dist/gitment.browser.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gitment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Gitment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{{ page.url }}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
