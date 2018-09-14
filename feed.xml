@@ -6,8 +6,8 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Sep 2018 14:13:01 +0800</pubDate>
-    <lastBuildDate>Fri, 14 Sep 2018 14:13:01 +0800</lastBuildDate>
+    <pubDate>Fri, 14 Sep 2018 17:30:56 +0800</pubDate>
+    <lastBuildDate>Fri, 14 Sep 2018 17:30:56 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -130,7 +130,7 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;微服务业的翘楚就是Netflix，他是公认的大规模生产级微服务做的最杰出的实践者。
-Netflix开源组件已经在他的大规模分布式微服务环境中经过了多年的生产实战验证，所以呢Spring Cloud的很多组件都是基于Netlifx开源组件的进一步封装&lt;/p&gt;
+Netflix开源组件已经在他的大规模分布式微服务环境中经过了多年的生产实战验证，所以呢Spring Cloud的很多组件都是基于Netflix开源组件的进一步封装&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;然后呢，我们看一下sc的作用，在我看来呢，最大的作用简化了分布式开发，极大的降低的分布式开发的门槛。&lt;/p&gt;
