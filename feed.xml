@@ -6,9 +6,78 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Sep 2018 21:43:56 +0800</pubDate>
-    <lastBuildDate>Mon, 10 Sep 2018 21:43:56 +0800</lastBuildDate>
+    <pubDate>Fri, 14 Sep 2018 10:16:20 +0800</pubDate>
+    <lastBuildDate>Fri, 14 Sep 2018 10:16:20 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Spring Cloud 微服务实践</title>
+        <description>&lt;h1 id=&quot;什么是微服务&quot;&gt;什么是微服务？&lt;/h1&gt;
+&lt;p&gt;大家好，第一部分我们来看一下什么是微服务，最官方定义呢？就是你看到的这一堆英文，给大家坦白我的英文口语也很差的，我就不读这一段了。&lt;/p&gt;
+
+&lt;h2 id=&quot;微服务的提出&quot;&gt;微服务的提出&lt;/h2&gt;
+&lt;p&gt;2。 接下来我给大家翻译一下重要的部分，我们看一下这个定义是怎么来的，微服务的提出呢，是有James和martin这两个人提出来的。上面呢就是James，下面就是Martin。
+他们在14年的3月份写过一篇文章，就叫microservices，就是微服务，有兴趣的小伙伴呢，可以去看一下原文。这里大家可以看一下时间，他们早在14的时候就提出来了
+那么现在呢，基本上，国内到了16年 17年，才开始慢慢的流行开来，特别是在17年的时候大多数公司已经使用的比较多了，大家可以看到，一个新事物，
+从提出来，到让大家所能接受，再到是实践，最后生产商使用，这是漫长的过程。所以大家现在看到一些新事物的提出，也不用太兴奋，因为距离生产上使用需要一定的时间。
+在这里强调是，微服务是一种架构风格，千万不要以为是微服务就是某些组件，就是某些框架，
+比如我们比较熟悉的RESTful也是一种架构风格，既然是一种架构风格，就没有强制性，没有标准的答案，是一种建议而已，细节上呢会有很多不同的理解
+因为有很多种理解所以我们现在看看Martin大叔微服务架构的理解。&lt;/p&gt;
+
+&lt;h2 id=&quot;理解&quot;&gt;理解&lt;/h2&gt;
+&lt;p&gt;1、前面我们看到，开始的英文当中 我有标粗的几个部分，那几个部分就是作者认为的微服务该有的几个特点，&lt;/p&gt;
+
+&lt;p&gt;这是第一个：&lt;/p&gt;
+
+&lt;p&gt;接下来我给大家翻译一下重要的部分。&lt;/p&gt;
+
+&lt;h1 id=&quot;spring-cloud-介绍&quot;&gt;Spring Cloud 介绍&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Spring Cloud是一个集合，是一个开发工具集，集合了众多的开源框架，注意他不是自己造轮子，它吸收了很多优秀的开源框架。&lt;/li&gt;
+  &lt;li&gt;Spring Cloud利用Spring boot的开发便利性，实现了很多功能，例如服务注册，服务发现、负载均衡、数据监控、RESTFull API等等。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;基本囊括了分布式框架所需要的所有功能，在整合过程中呢，最主要的是基于对Netflix开源组件的进一步封装。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;不知道大家知不知道Netflix，在国内喜欢看美剧给他起了一个中文名子，叫耐非，他是美国一家在线视频网站，有点像类似国内的youku、iqiyi之类的网站&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;微服务业的翘楚就是Netflix，他是公认的大规模生产级微服务做的最杰出的实践者。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Netflix开源组件已经在他的大规模分布式微服务环境中经过了多年的生产实战验证，所以呢Spring Cloud的很多组件都是基于Netlifx开源组件的进一步封装&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;然后呢，我们看一下sc的作用，在我看来呢，最大的作用简化了分布式开发，极大的降低的分布式开发的门槛。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;也正因为如此，我认为掌握Spring Cloud相关组件，怎么用哪些都是其次，我们要更理解分布式的特点，分布式架构的特点，这是最重要的。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Thu, 13 Sep 2018 00:00:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/2018/09/13/ppt-about-spring-cloud.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/13/ppt-about-spring-cloud.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>如何快速制作一个PPT</title>
+        <description>&lt;h2 id=&quot;定好题目&quot;&gt;定好题目&lt;/h2&gt;
+&lt;p&gt;Spring Cloud微服务实践&lt;/p&gt;
+
+&lt;h2 id=&quot;选好ppt母版&quot;&gt;选好PPT母版&lt;/h2&gt;
+</description>
+        <pubDate>Wed, 12 Sep 2018 00:00:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/2018/09/12/create-ppt.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/12/create-ppt.html</guid>
+        
+        <category>ppt</category>
+        
+        
+      </item>
     
       <item>
         <title>Nvm Node Npm Install</title>
@@ -501,40 +570,6 @@ source /etc/profile
         <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
         <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-pwd.html</link>
         <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-pwd.html</guid>
-        
-        <category>linux</category>
-        
-        
-        <category>linux</category>
-        
-        <category>shell</category>
-        
-      </item>
-    
-      <item>
-        <title>掌握linux命令：ls</title>
-        <description>
-</description>
-        <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-ls.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-ls.html</guid>
-        
-        <category>linux</category>
-        
-        
-        <category>linux</category>
-        
-        <category>shell</category>
-        
-      </item>
-    
-      <item>
-        <title>掌握linux命令：ifconfig</title>
-        <description>
-</description>
-        <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-ifconfig.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-ifconfig.html</guid>
         
         <category>linux</category>
         
