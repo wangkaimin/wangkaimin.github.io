@@ -4,15 +4,19 @@
     <title>个人笔记本</title>
     <description>这是我的个人笔记本，使用Jekyll生成，采用默认主题，托管于Github Pages上面。
 </description>
-    <link>http://github.wangkaimin.com/</link>
-    <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Sep 2018 17:30:56 +0800</pubDate>
-    <lastBuildDate>Fri, 14 Sep 2018 17:30:56 +0800</lastBuildDate>
+    <link>http://ali.oss.wangkaimin.com/</link>
+    <atom:link href="http://ali.oss.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 17 Sep 2018 10:58:10 +0800</pubDate>
+    <lastBuildDate>Mon, 17 Sep 2018 10:58:10 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
         <title>Spring Cloud 微服务实践</title>
-        <description>&lt;h1 id=&quot;什么是微服务&quot;&gt;什么是微服务？&lt;/h1&gt;
+        <description>&lt;p&gt;本文介绍了spring cloud微服务实践&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;什么是微服务&quot;&gt;什么是微服务？&lt;/h1&gt;
 &lt;p&gt;大家好，第一部分我们来看一下什么是微服务，最官方定义呢？就是你看到的这一堆英文，给大家坦白我的英文口语也很差的，我就不读这一段了。&lt;/p&gt;
 
 &lt;h2 id=&quot;微服务的提出&quot;&gt;微服务的提出&lt;/h2&gt;
@@ -139,8 +143,8 @@ Netflix开源组件已经在他的大规模分布式微服务环境中经过了�
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 13 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/2018/09/13/ppt-about-spring-cloud.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/13/ppt-about-spring-cloud.html</guid>
+        <link>http://ali.oss.wangkaimin.com/2018/09/13/ppt-about-spring-cloud.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/2018/09/13/ppt-about-spring-cloud.html</guid>
         
         
       </item>
@@ -153,8 +157,8 @@ Netflix开源组件已经在他的大规模分布式微服务环境中经过了�
 &lt;h2 id=&quot;选好ppt母版&quot;&gt;选好PPT母版&lt;/h2&gt;
 </description>
         <pubDate>Wed, 12 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/2018/09/12/create-ppt.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/12/create-ppt.html</guid>
+        <link>http://ali.oss.wangkaimin.com/2018/09/12/create-ppt.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/2018/09/12/create-ppt.html</guid>
         
         <category>ppt</category>
         
@@ -162,8 +166,10 @@ Netflix开源组件已经在他的大规模分布式微服务环境中经过了�
       </item>
     
       <item>
-        <title>Nvm Node Npm Install</title>
-        <description>
+        <title>Node安装：nvm、npm的安装方法</title>
+        <description>&lt;p&gt;本文介绍nvm、npm的一般安装方法！&lt;/p&gt;
+
+&lt;!--more--&gt;
 &lt;p&gt;https://npm.taobao.org/&lt;/p&gt;
 
 &lt;p&gt;国内优秀npm镜像推荐及使用
@@ -254,16 +260,17 @@ npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;npm@latest &lt;span cl
 &lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/2018/09/10/nvm-node-npm-install.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/10/nvm-node-npm-install.html</guid>
+        <link>http://ali.oss.wangkaimin.com/2018/09/10/nvm-node-npm-install.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/2018/09/10/nvm-node-npm-install.html</guid>
         
         
       </item>
     
       <item>
         <title>部署github page：使用jekyll admin</title>
-        <description>&lt;p&gt;本文介绍如何使用Jekyll admin。
-&lt;!--more--&gt;&lt;/p&gt;
+        <description>&lt;p&gt;本文介绍如何使用Jekyll admin。&lt;/p&gt;
+
+&lt;!--more--&gt;
 &lt;h2 id=&quot;在_config中增加&quot;&gt;在_config中增加：&lt;/h2&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plugins:
   - jekyll-feed
@@ -284,8 +291,8 @@ bundle install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/2018/09/10/install-jekyll-admin.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/10/install-jekyll-admin.html</guid>
+        <link>http://ali.oss.wangkaimin.com/2018/09/10/install-jekyll-admin.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/2018/09/10/install-jekyll-admin.html</guid>
         
         <category>jekyll</category>
         
@@ -294,8 +301,9 @@ bundle install
     
       <item>
         <title>部署github page：jekyll评论整合gitment</title>
-        <description>&lt;p&gt;本文介绍了整合gitment作为评论系统。
-&lt;!--more--&gt;&lt;/p&gt;
+        <description>&lt;p&gt;本文介绍了整合gitment作为评论系统。&lt;/p&gt;
+
+&lt;!--more--&gt;
 &lt;h2 id=&quot;1-申请一个github-oauth-application&quot;&gt;1. 申请一个Github OAuth Application&lt;/h2&gt;
 &lt;p&gt;Github头像下拉菜单 &amp;gt; Settings &amp;gt; 左边Developer settings下的OAuth Application &amp;gt; Register a new application，填写相关信息。&lt;/p&gt;
 
@@ -382,16 +390,17 @@ bundle install
 &lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html</guid>
+        <link>http://ali.oss.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/2018/09/10/github-page-jekyll-gitment.html</guid>
         
         
       </item>
     
       <item>
         <title>源码编译：ubuntu14.04下编译mysql</title>
-        <description>&lt;p&gt;在Ubuntu 14.04下通过mysql源码编译mysql，主要包括搭建环境、配置相关以及编译过程中遇到的问题。
-&lt;!--more--&gt;&lt;/p&gt;
+        <description>&lt;p&gt;在Ubuntu 14.04下通过mysql源码编译mysql，主要包括搭建环境、配置相关以及编译过程中遇到的问题。&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h2 id=&quot;1下载源码&quot;&gt;1、下载源码：&lt;/h2&gt;
 
@@ -564,8 +573,8 @@ source /etc/profile
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 09 Sep 2018 23:30:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/mysql/2018/09/09/ompile-code-of-mysql.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/mysql/2018/09/09/ompile-code-of-mysql.html</guid>
+        <link>http://ali.oss.wangkaimin.com/mysql/2018/09/09/ompile-code-of-mysql.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/mysql/2018/09/09/ompile-code-of-mysql.html</guid>
         
         <category>mysql</category>
         
@@ -576,7 +585,11 @@ source /etc/profile
     
       <item>
         <title>掌握git：git submodule使用</title>
-        <description>&lt;blockquote&gt;
+        <description>&lt;p&gt;本文介绍Git子模块的使用！&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;参考：&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97&quot;&gt;Git-工具-子模块&lt;/a&gt;&lt;/li&gt;
@@ -584,8 +597,8 @@ source /etc/profile
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sat, 08 Sep 2018 00:10:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/git/submodule/2018/09/08/git-submodule.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/git/submodule/2018/09/08/git-submodule.html</guid>
+        <link>http://ali.oss.wangkaimin.com/git/submodule/2018/09/08/git-submodule.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/git/submodule/2018/09/08/git-submodule.html</guid>
         
         <category>git</category>
         
@@ -598,7 +611,11 @@ source /etc/profile
     
       <item>
         <title>部署github page：jekyll整合disqus评论系统</title>
-        <description>&lt;ol&gt;
+        <description>&lt;p&gt;本文介绍如何在jekyll中整合disqus评论系统！&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ol&gt;
   &lt;li&gt;注册disqus.com&lt;/li&gt;
   &lt;li&gt;获取disqus代码&lt;/li&gt;
   &lt;li&gt;在_layouts中新建xxx.html，放置代码&lt;/li&gt;
@@ -616,8 +633,8 @@ source /etc/profile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Sat, 08 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html</guid>
+        <link>http://ali.oss.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html</guid>
         
         <category>github</category>
         
@@ -630,11 +647,13 @@ source /etc/profile
     
       <item>
         <title>掌握linux命令：top</title>
-        <description>
+        <description>&lt;p&gt;本文介绍top命令的使用方法！&lt;/p&gt;
+
+&lt;!--more--&gt;
 </description>
         <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-top.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-top.html</guid>
+        <link>http://ali.oss.wangkaimin.com/linux/shell/2018/09/07/linux-shell-top.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/linux/shell/2018/09/07/linux-shell-top.html</guid>
         
         <category>linux</category>
         
@@ -647,11 +666,13 @@ source /etc/profile
     
       <item>
         <title>掌握linux命令：pwd</title>
-        <description>
+        <description>&lt;p&gt;本文介绍pwd命令的使用方法！&lt;/p&gt;
+
+&lt;!--more--&gt;
 </description>
         <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-pwd.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-pwd.html</guid>
+        <link>http://ali.oss.wangkaimin.com/linux/shell/2018/09/07/linux-shell-pwd.html</link>
+        <guid isPermaLink="true">http://ali.oss.wangkaimin.com/linux/shell/2018/09/07/linux-shell-pwd.html</guid>
         
         <category>linux</category>
         

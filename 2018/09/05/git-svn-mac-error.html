@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>如何快速制作一个PPT</title>
-  <meta name="description" content="定好题目Spring Cloud微服务实践选好PPT母版">
+  <title>git-svn在mac下遇到的问题</title>
+  <meta name="description" content="本文介绍了mac下git-svn使用的问题！">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ali.oss.wangkaimin.com/2018/09/12/create-ppt.html">
+  <link rel="canonical" href="http://ali.oss.wangkaimin.com/2018/09/05/git-svn-mac-error.html">
   <link rel="alternate" type="application/rss+xml" title="个人笔记本" href="http://ali.oss.wangkaimin.com/feed.xml" />
 </head>
 
@@ -65,15 +65,72 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">如何快速制作一个PPT</h1>
-    <p class="post-meta">2018-09-12</p>
+    <h1 class="post-title">git-svn在mac下遇到的问题</h1>
+    <p class="post-meta">2018-09-05</p>
   </header>
 
   <article class="post-content">
-    <h2 id="定好题目">定好题目</h2>
-<p>Spring Cloud微服务实践</p>
+    <p>本文介绍了mac下git-svn使用的问题！</p>
 
-<h2 id="选好ppt母版">选好PPT母版</h2>
+<!--more-->
+<h1 id="mac下git-svn使用问题">Mac下git svn使用问题</h1>
+
+<h2 id="macos环境">MacOS环境</h2>
+<p>macOS High Sierra 
+版本 10.13.6 (17G65)</p>
+
+<h2 id="遇到的问题1">遇到的问题1</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git -c diff.mnemonicprefix=false -c core.quotepath=false -c credential.helper=sourcetree svn rebase 
+Can't locate SVN/Core.pm in @INC (you may need to install the SVN::Core module)
+(@INC contains: /usr/local/git/share/perl5
+ /Applications/Sourcetree.app/Contents/Resources/git_local/lib/perl5/site_perl
+  /Library/Perl/5.18/darwin-thread-multi-2level
+   /Library/Perl/5.18
+   /Network/Library/Perl/5.18/darwin-thread-multi-2level
+    /Network/Library/Perl/5.18
+     /Library/Perl/Updates/5.18.2/darwin-thread-multi-2level
+     /Library/Perl/Updates/5.18.2
+      /System/Library/Perl/5.18/darwin-thread-multi-2level
+      /System/Library/Perl/5.18
+       /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level
+       /System/Library/Perl/Extras/5.18 .)
+at /Library/Perl/5.18/Git/SVN/Utils.pm line 6.
+BEGIN failed--compilation aborted at
+ /Library/Perl/5.18/Git/SVN/Utils.pm line 6.
+Compilation failed in require at
+ /Library/Perl/5.18/Git/SVN.pm line 25.
+BEGIN failed--compilation aborted at
+ /Library/Perl/5.18/Git/SVN.pm line 32.
+Compilation failed in require at
+ /Applications/Sourcetree.app/Contents/Resources/git_local/libexec/git-core/git-svn line 21.
+BEGIN failed--compilation aborted at
+ /Applications/Sourcetree.app/Contents/Resources/git_local/libexec/git-core/git-svn line 21.
+Completed with errors, see above
+
+# sudo ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.18/darwin-thread-multi-2level/SVN/ /Library/Perl/5.18/SVN
+</code></pre></div></div>
+
+<h2 id="问题2">问题2</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Can't locate Git/SVN.pm in @INC (you may need to install the Git::SVN module)
+
+BEGIN failed--compilation aborted at
+/Applications/Sourcetree.app/Contents/Resources/git_local/libexec/git-core/git-svn line 21.
+</code></pre></div></div>
+<h2 id="问题3">问题3</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git -c diff.mnemonicprefix=false -c core.quotepath=false -c credential.helper=sourcetree svn rebase 
+Can't create session: Unable to connect to a repository at
+ URL 'http://bizsvn.sogou-inc.com/svn/telepartner':
+  Access to '/svn/telepartner' forbidden at /Library/Perl/5.18/Git/SVN.pm line 717.
+
+Completed with errors, see above
+</code></pre></div></div>
+
+<h2 id="解决方法">解决方法</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo cpan Git::SVN
+sudo ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.18/darwin-thread-multi-2level/SVN/ /Library/Perl/5.18/SVN 
+sudo mkdir /Library/Perl/5.18/auto
+sudo ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.18/darwin-thread-multi-2level/auto/SVN/ /Library/Perl/5.18/auto/SVN
+</code></pre></div></div>
 
   </article>
 
@@ -85,7 +142,7 @@
 <script src="https://github.wangkaimin.com/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        id: '/2018/09/12/create-ppt.html',
+        id: '/2018/09/05/git-svn-mac-error.html',
         owner: 'kaiminwang',
         repo: 'gitment',
         oauth: {

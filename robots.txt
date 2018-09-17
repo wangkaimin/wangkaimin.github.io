@@ -1,1 +1,1 @@
-Sitemap: http://github.wangkaimin.com/sitemap.xml
+Sitemap: http://ali.oss.wangkaimin.com/sitemap.xml
