@@ -6,12 +6,12 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Sep 2018 11:53:57 +0800</pubDate>
-    <lastBuildDate>Tue, 18 Sep 2018 11:53:57 +0800</lastBuildDate>
+    <pubDate>Tue, 18 Sep 2018 12:02:35 +0800</pubDate>
+    <lastBuildDate>Tue, 18 Sep 2018 12:02:35 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
-        <title>Iphone4s 9.3.5 To 6.1.3</title>
+        <title>Iphone 4s Ios 9.3.5 To 6.1.3</title>
         <description>&lt;p&gt;本文介绍iphone 4s从9.3.5版本降级到6.1.3&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -22,61 +22,61 @@
 
 &lt;p&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-7LJ_4uANUbg/WlwXDJAKMsI/AAAAAAAAJF8/pd5BSzVYL286zEgeCDc6izlpWVM8F06yQCLcBGAs/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B10_opt.png&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-7LJ_4uANUbg/WlwXDJAKMsI/AAAAAAAAJF8/pd5BSzVYL286zEgeCDc6izlpWVM8F06yQCLcBGAs/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B10_opt.png&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;本站很久之前就介紹過利用 odysseusOTA 就可以將 iPhone 4S 降級至 iOS 6.1.3，詳情請看：&lt;a href=&quot;https://applefans.today/blog/1839968843/&quot;&gt;iPhone 4s/iPad 2降級iOS 6.1.3教學（使用odysseusOTA）&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;本站很久之前就介绍过利用 odysseusOTA 就可以将 iPhone 4S 降级至 iOS 6.1.3，详情请看：&lt;a href=&quot;https://applefans.today/blog/1839968843/&quot;&gt;iPhone 4s/iPad 2降級iOS 6.1.3教學（使用odysseusOTA）&lt;/a&gt;。&lt;/p&gt;
 
-&lt;p&gt;但畢竟操作相當複雜，對於大多數的 iPhone 4S 用戶來說是個不可能的任務，這次蘋果直接開放 iOS 6.1.3 認證，意味著使用者可以直接下載相對應的韌體，然後透過 iTunes 就可以將自己手中的 iPhone 4S 降級回 iOS 6.1.3。&lt;/p&gt;
+&lt;p&gt;但毕竟操作相当复杂，对于大多数的iPhone 4S 用户来说是个不可能的任务，这次苹果直接开放iOS 6.1.3 认证，意味着使用者可以直接下载相对应的韧体，然后透过iTunes 就可以将自己手中的?iPhone 4S 降级回iOS 6.1.3。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-SiFfO_-uUPg/Wlw8UuikhXI/AAAAAAAAJHg/YguHUm1VjU0xYM5iGwLvKltZFmY5_aDZQCLcBGAs/s1600/iphone-iphone4s-colors.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-SiFfO_-uUPg/Wlw8UuikhXI/AAAAAAAAJHg/YguHUm1VjU0xYM5iGwLvKltZFmY5_aDZQCLcBGAs/s1600/iphone-iphone4s-colors.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;行前工具準備&quot;&gt;行前工具準備&lt;/h2&gt;
+&lt;h2 id=&quot;行前工具准备&quot;&gt;行前工具准备&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;已裝好 iTunes 的 Mac 或 Windows 乙台（&lt;a href=&quot;https://www.apple.com/tw/itunes/download/&quot;&gt;點此下載 iTunes&lt;/a&gt;）&lt;/li&gt;
-  &lt;li&gt;iPhone 30pin 傳輸線 乙條&lt;/li&gt;
+  &lt;li&gt;已装好 iTunes 的 Mac 或 Windows 乙台（&lt;a href=&quot;https://www.apple.com/tw/itunes/download/&quot;&gt;点此下载 iTunes&lt;/a&gt;）&lt;/li&gt;
+  &lt;li&gt;iPhone 30pin 传输线&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;下載-ios-613-韌體&quot;&gt;下載 iOS 6.1.3 韌體&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw&quot;&gt;iPhone 4S 蘋果官方下載連結&lt;/a&gt;（&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw&quot;&gt;點此下載&lt;/a&gt;）&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw&quot;&gt;iPad 2（Wi-Fi） 蘋果官方下載連結&lt;/a&gt;（&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw&quot;&gt;點此下載&lt;/a&gt;）&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw&quot;&gt;iPad 2（GSM）蘋果官方下載連結&lt;/a&gt;（&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw&quot;&gt;點此下載&lt;/a&gt;）&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw&quot;&gt;iPad 2（CDMA）蘋果官方下載連結&lt;/a&gt;（&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw&quot;&gt;點此下載&lt;/a&gt;）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw&quot;&gt;iPhone 4S 苹果官方下载连结&lt;/a&gt;（&lt;a href=&quot;http:// appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw&quot;&gt;点此下载&lt;/a&gt;）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw&quot;&gt;iPad 2（Wi-Fi） 苹果官方下载连结&lt;/a&gt;（&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw&quot;&gt;点此下载&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw&quot;&gt;iPad 2（GSM）苹果官方下载连结&lt;/a&gt;（&lt;a href=&quot;http ://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw&quot;&gt;点此下载&lt;/a&gt;）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw&quot;&gt;iPad 2（CDMA）苹果官方下载连结&lt;/a&gt;（&lt;a href=&quot;http ://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw&quot;&gt;点此下载&lt;/a&gt;）&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;※如果你的 iPad 2 是 2012 年中出的小改版，就無法降級&lt;/p&gt;
+&lt;p&gt;※如果你的 iPad 2 是 2012 年中出的小改版，就无法降级&lt;/p&gt;
 
 &lt;h2 id=&quot;iphone-4s-或-ipad-2-降級至-ios-613以-iphone-4s-為例&quot;&gt;iPhone 4S 或 iPad 2 降級至 iOS 6.1.3（以 iPhone 4S 為例）&lt;/h2&gt;
 
-&lt;p&gt;浪子回頭金不換，iPhone 4S 或 iPad 2 現在就可以回頭，只要幾個步驟就可以降級回原來的版本，就讓我們開始吧！&lt;/p&gt;
+&lt;p&gt;浪子回头金不换，iPhone 4S 或 iPad 2 现在就可以回头，只要几个步骤就可以降级回原来的版本，就让我们开始吧！&lt;/p&gt;
 
 &lt;h3 id=&quot;step-1&quot;&gt;Step 1.&lt;/h3&gt;
 
 &lt;h4 id=&quot;-mac&quot;&gt;⌘ Mac：&lt;/h4&gt;
 
-&lt;p&gt;開啟 iTunes 接上 iPhone/iPad，按著鍵盤上的 option 鍵不放，同時點選 iTunes 上的【回復 iPhone…】按鈕。&lt;/p&gt;
+&lt;p&gt;开启 iTunes 接上 iPhone/iPad，按着键盘上的 option 键不放，同时点选 iTunes 上的【回复 iPhone…】按钮。&lt;/p&gt;
 
 &lt;h4 id=&quot;-windows&quot;&gt;⌘ Windows：&lt;/h4&gt;
 
-&lt;p&gt;開啟 iTunes 接上 iPhone/iPad，按著鍵盤上的 Shift 鍵不放，同時點選 iTunes 上的【回復 iPhone…】按鈕。&lt;/p&gt;
+&lt;p&gt;开启 iTunes 接上 iPhone/iPad，按着键盘上的 Shift 键不放，同时点选 iTunes 上的【回复 iPhone…】按钮。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-bvmnRO0dolU/WlwxQ-n_OqI/AAAAAAAAJGw/YcRERVe_Au8ZojmELQFJep8RGd2EO3D3gCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_19_09.png&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-bvmnRO0dolU/WlwxQ-n_OqI/AAAAAAAAJGw/YcRERVe_Au8ZojmELQFJep8RGd2EO3D3gCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_19_09.png&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-2&quot;&gt;Step 2.&lt;/h3&gt;
 
-&lt;p&gt;找到剛剛下載好的 iOS 韌體，副檔名是 .ipsw。（如果下載回來的檔案是 .zip，直接改成 .ipsw 即可）&lt;/p&gt;
+&lt;p&gt;找到刚刚下载好的 iOS 镜像，存档名是 .ipsw。 （如果下载回来的档案是 .zip，直接改成 .ipsw 即可）&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-fMg0M8Gkvqs/WlwxRHZmKLI/AAAAAAAAJGw/-yPEIXncXEUzEMgjJZ2oD6FDFO3uE6_ggCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_25_07.png&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-fMg0M8Gkvqs/WlwxRHZmKLI/AAAAAAAAJGw/-yPEIXncXEUzEMgjJZ2oD6FDFO3uE6_ggCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_25_07.png&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-3&quot;&gt;Step 3.&lt;/h3&gt;
 
-&lt;p&gt;iTunes 會跳出視窗詢問是否確定要清除和回復到 iOS 6.1.3，請點擊【回復】來繼續下一步。&lt;/p&gt;
+&lt;p&gt;iTunes 会跳出视窗询问是否确定要清除和回复到 iOS 6.1.3，请点击【回复】来继续下一步。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-m_kDD1h4YAM/WlwxQNY1sII/AAAAAAAAJGw/sNQdmlOBls4mHmKNw1gzdhrqP6yfJBZgACEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B12.25.17.png&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-m_kDD1h4YAM/WlwxQNY1sII/AAAAAAAAJGw/sNQdmlOBls4mHmKNw1gzdhrqP6yfJBZgACEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B12.25.17.png&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-4&quot;&gt;Step 4.&lt;/h3&gt;
 
-&lt;p&gt;接下來 iTunes 就會開始幫 iPhone 4S 降級，大約 10 分鐘左右可以降級完成。&lt;/p&gt;
+&lt;p&gt;接下来 iTunes 就会开始帮 iPhone 4S 降级，大约 10 分钟左右可以降级完成。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-k3v2aXyrhoA/Wlwx-h22K8I/AAAAAAAAJG4/WOCZepnELfYEECcacRQkTSk7lhgBpl6kgCLcBGAs/s1600/result.png&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-k3v2aXyrhoA/Wlwx-h22K8I/AAAAAAAAJG4/WOCZepnELfYEECcacRQkTSk7lhgBpl6kgCLcBGAs/s1600/result.png&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -88,9 +88,9 @@
 
 &lt;h2 id=&quot;結語&quot;&gt;結語&lt;/h2&gt;
 
-&lt;p&gt;iPhone 4S 是 Steve Jobs 最後一支 iPhone 作品，也被認為是「史上最經典的 iPhone」。&lt;/p&gt;
+&lt;p&gt;iPhone 4S 是 Steve Jobs 最后一支 iPhone 作品，也被认为是「史上最经典的 iPhone」。&lt;/p&gt;
 
-&lt;p&gt;不過現在把 iPhone 4S 降級回 iOS 6.1.3 基本上也只是用來懷舊，沒有太大的用處，畢竟現在大部分的 Apps 都需要 iOS 9 以上才能支援。&lt;/p&gt;
+&lt;p&gt;不过现在把 iPhone 4S 降级回 iOS 6.1.3 基本上也只是用来怀旧，没有太大的用处，毕竟现在大部分的 Apps 都需要 iOS 9 以上才能支援。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;摘录：&lt;/p&gt;
@@ -101,8 +101,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Tue, 18 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/2018/09/18/iphone4s-9.3.5-to-6.1.3.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/18/iphone4s-9.3.5-to-6.1.3.html</guid>
+        <link>http://github.wangkaimin.com/2018/09/18/iphone-4s-ios-9.3.5-to-6.1.3.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/18/iphone-4s-ios-9.3.5-to-6.1.3.html</guid>
         
         
       </item>
