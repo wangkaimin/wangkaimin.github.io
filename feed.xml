@@ -6,9 +6,85 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Sep 2018 12:04:51 +0800</pubDate>
-    <lastBuildDate>Tue, 18 Sep 2018 12:04:51 +0800</lastBuildDate>
+    <pubDate>Wed, 19 Sep 2018 15:20:56 +0800</pubDate>
+    <lastBuildDate>Wed, 19 Sep 2018 15:20:56 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>SVN 提交操作</title>
+        <description>&lt;p&gt;在上一章中，我们检出了版本库runoob01，对应的目录放在/home/user01/runoob01中，下面我们针对这个库进行版本控制。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;我们在库本版中需要增加一个readme的说明文件。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@runoob:~/svn/runoob01/trunk# cat readme 
+this is SVN tutorial.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;查看工作副本中的状态。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@runoob:~/svn/runoob01/trunk# svn status
+?       readme
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;此时 readme的状态为？，说明它还未加到版本控制中。&lt;/p&gt;
+
+&lt;p&gt;将文件readme加到版本控制，等待提交到版本库。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@runoob:~/svn/runoob01/trunk# svn add readme 
+A         readme
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;查看工作副本中的状态&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@runoob:~/svn/runoob01/trunk# svn status     
+A       readme
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;此时 readme的状态为A,它意味着这个文件已经被成功地添加到了版本控制中。&lt;/p&gt;
+
+&lt;p&gt;为了把 readme 存储到版本库中，使用 commit -m 加上注释信息来提交。&lt;/p&gt;
+
+&lt;p&gt;如果你忽略了 -m 选项， SVN会打开一个可以输入多行的文本编辑器来让你输入提交信息。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@runoob:~/svn/runoob01/trunk# svn commit -m &quot;SVN readme.&quot;
+Adding         readme
+Transmitting file data .
+Committed revision 8.
+svn commit -m &quot;SVN readme.&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;现在 readme 被成功地添加到了版本库中，并且修订版本号自动增加了1。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;摘录：&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;&lt;strong&gt;菜鸟教程&lt;/strong&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.runoob.com/svn/svn-commit.html&quot;&gt;SVN 提交操作&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Wed, 19 Sep 2018 00:00:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/vsc/svn/2018/09/19/svn-commit.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/vsc/svn/2018/09/19/svn-commit.html</guid>
+        
+        <category>svn</category>
+        
+        
+        <category>vsc</category>
+        
+        <category>svn</category>
+        
+      </item>
     
       <item>
         <title>iphone4s从9.3.5降级到6.1.3</title>
@@ -622,25 +698,6 @@ source /etc/profile
         <category>github</category>
         
         <category>page</category>
-        
-      </item>
-    
-      <item>
-        <title>掌握linux命令：top</title>
-        <description>&lt;p&gt;本文介绍top命令的使用方法！&lt;/p&gt;
-
-&lt;!--more--&gt;
-</description>
-        <pubDate>Fri, 07 Sep 2018 16:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-top.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/linux/shell/2018/09/07/linux-shell-top.html</guid>
-        
-        <category>linux</category>
-        
-        
-        <category>linux</category>
-        
-        <category>shell</category>
         
       </item>
     
