@@ -6,8 +6,8 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Sep 2018 15:20:56 +0800</pubDate>
-    <lastBuildDate>Wed, 19 Sep 2018 15:20:56 +0800</lastBuildDate>
+    <pubDate>Wed, 19 Sep 2018 18:34:12 +0800</pubDate>
+    <lastBuildDate>Wed, 19 Sep 2018 18:34:12 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -83,6 +83,116 @@ svn commit -m &quot;SVN readme.&quot;
         <category>vsc</category>
         
         <category>svn</category>
+        
+      </item>
+    
+      <item>
+        <title>NoSuchMethodError</title>
+        <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1006)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.sogou.telepartner.web.filter.StatFuncFilter.doFilter(StatFuncFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.sogou.bizsession.filter.SessionFilter.doFilter(SessionFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.servlet.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:130)
+	at org.springframework.boot.web.servlet.support.ErrorPageFilter.access$000(ErrorPageFilter.java:66)
+	at org.springframework.boot.web.servlet.support.ErrorPageFilter$1.doFilterInternal(ErrorPageFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.boot.web.servlet.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
+	at io.netty.channel.nio.NioEventLoop$5.run(NioEventLoop.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.channel.nio.NioEventLoop.openSelector(NioEventLoop.java:210)
+	at io.netty.channel.nio.NioEventLoop.&amp;lt;init&amp;gt;(NioEventLoop.java:149)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:127)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:36)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.&amp;lt;init&amp;gt;(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.&amp;lt;init&amp;gt;(MultithreadEventExecutorGroup.java:58)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.&amp;lt;init&amp;gt;(MultithreadEventExecutorGroup.java:47)
+	at io.netty.channel.MultithreadEventLoopGroup.&amp;lt;init&amp;gt;(MultithreadEventLoopGroup.java:59)
+	at io.netty.channel.nio.NioEventLoopGroup.&amp;lt;init&amp;gt;(NioEventLoopGroup.java:77)
+	at io.netty.channel.nio.NioEventLoopGroup.&amp;lt;init&amp;gt;(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.&amp;lt;init&amp;gt;(NioEventLoopGroup.java:59)
+	at io.lettuce.core.resource.DefaultEventLoopGroupProvider.createEventLoopGroup(DefaultEventLoopGroupProvider.java:141)
+	at io.lettuce.core.resource.DefaultEventLoopGroupProvider.getOrCreate(DefaultEventLoopGroupProvider.java:114)
+	at io.lettuce.core.resource.DefaultEventLoopGroupProvider.allocate(DefaultEventLoopGroupProvider.java:63)
+	at io.lettuce.core.AbstractRedisClient.getEventLoopGroup(AbstractRedisClient.java:186)
+	at io.lettuce.core.AbstractRedisClient.channelType(AbstractRedisClient.java:172)
+	at io.lettuce.core.cluster.RedisClusterClient.createConnectionBuilder(RedisClusterClient.java:718)
+	at io.lettuce.core.cluster.RedisClusterClient.connectStatefulAsync(RedisClusterClient.java:647)
+	at io.lettuce.core.cluster.RedisClusterClient.connectToNodeAsync(RedisClusterClient.java:430)
+	at io.lettuce.core.cluster.RedisClusterClient$NodeConnectionFactoryImpl.connectToNodeAsync(RedisClusterClient.java:1073)
+	at io.lettuce.core.cluster.topology.ClusterTopologyRefresh.getConnections(ClusterTopologyRefresh.java:207)
+	at io.lettuce.core.cluster.topology.ClusterTopologyRefresh.loadViews(ClusterTopologyRefresh.java:68)
+	at io.lettuce.core.cluster.RedisClusterClient.loadPartitions(RedisClusterClient.java:787)
+	at io.lettuce.core.cluster.RedisClusterClient.initializePartitions(RedisClusterClient.java:761)
+	at io.lettuce.core.cluster.RedisClusterClient.connectClusterImpl(RedisClusterClient.java:500)
+	at io.lettuce.core.cluster.RedisClusterClient.connect(RedisClusterClient.java:339)
+	at org.springframework.data.redis.connection.lettuce.ClusterConnectionProvider.getConnection(ClusterConnectionProvider.java:55)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.doGetAsyncDedicatedConnection(LettuceConnection.java:962)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.getDedicatedConnection(LettuceConnection.java:942)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.getConnection(LettuceConnection.java:903)
+	at org.springframework.data.redis.connection.lettuce.LettuceKeyCommands.getConnection(LettuceKeyCommands.java:646)
+	at org.springframework.data.redis.connection.lettuce.LettuceKeyCommands.exists(LettuceKeyCommands.java:71)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.exists(DefaultedRedisConnection.java:54)
+	at org.springframework.data.redis.core.RedisTemplate.lambda$hasKey$4(RedisTemplate.java:739)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
+	at org.springframework.data.redis.core.RedisTemplate.hasKey(RedisTemplate.java:739)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 19 Sep 2018 00:00:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/2018/09/19/redis-cluster-reflect.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/19/redis-cluster-reflect.html</guid>
+        
         
       </item>
     
@@ -207,10 +317,17 @@ timedatectl set-timezone Asia/Shanghai # 设置系统时区为上海
     
       <item>
         <title>如何快速制作一个PPT</title>
-        <description>&lt;h2 id=&quot;定好题目&quot;&gt;定好题目&lt;/h2&gt;
-&lt;p&gt;Spring Cloud微服务实践&lt;/p&gt;
+        <description>&lt;h3 id=&quot;定好题目&quot;&gt;定好题目&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Cloud微服务实践&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;选好ppt母版&quot;&gt;选好PPT母版&lt;/h2&gt;
+&lt;h3 id=&quot;选好ppt母版&quot;&gt;选好PPT母版&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;首页模板&lt;/li&gt;
+  &lt;li&gt;内容模版&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Wed, 12 Sep 2018 00:00:00 +0800</pubDate>
         <link>http://github.wangkaimin.com/2018/09/12/create-ppt.html</link>
@@ -662,42 +779,6 @@ source /etc/profile
         <category>git</category>
         
         <category>submodule</category>
-        
-      </item>
-    
-      <item>
-        <title>部署github page：jekyll整合disqus评论系统</title>
-        <description>&lt;p&gt;本文介绍如何在jekyll中整合disqus评论系统！&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;注册disqus.com&lt;/li&gt;
-  &lt;li&gt;获取disqus代码&lt;/li&gt;
-  &lt;li&gt;在_layouts中新建xxx.html，放置代码&lt;/li&gt;
-  &lt;li&gt;如果想再page页加入评论，末尾加入&lt;code class=&quot;highlighter-rouge&quot;&gt;{% include xxx.html %}&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;在所有的post中加入评论，末尾加入&lt;code class=&quot;highlighter-rouge&quot;&gt;{% include xxx.html %}&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;如果想每个post中控制评论展示，需要添加变量&lt;/li&gt;
-  &lt;li&gt;在想启用的post markdown文件中加入&lt;code class=&quot;highlighter-rouge&quot;&gt;comments: true&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;page.comments %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% include xxx.html %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% endif %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Sat, 08 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/github/page/2018/09/08/github-page-disqus.html</guid>
-        
-        <category>github</category>
-        
-        
-        <category>github</category>
-        
-        <category>page</category>
         
       </item>
     
