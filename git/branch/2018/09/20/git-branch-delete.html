@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>联系我</title>
-  <meta name="description" content="">
+  <title>掌握git：git branch 删除</title>
+  <meta name="description" content="本文介绍了git branch的删除的使用方法！">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://github.wangkaimin.com/contact/">
+  <link rel="canonical" href="http://github.wangkaimin.com/git/branch/2018/09/20/git-branch-delete.html">
   <link rel="alternate" type="application/rss+xml" title="个人笔记本" href="http://github.wangkaimin.com/feed.xml" />
 </head>
 
@@ -37,11 +37,15 @@
           
         
           
-          <a class="page-link" href="/about/">关于我</a>
+          <a class="page-link" href="/page/about">关于我</a>
           
         
           
-          <a class="page-link" href="/contact/">联系我</a>
+          <a class="page-link" href="/page/aliyun">阿里云优惠</a>
+          
+        
+          
+          <a class="page-link" href="/page/contact">评论展示</a>
           
         
           
@@ -69,28 +73,41 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">联系我</h1>
+    <h1 class="post-title">掌握git：git branch 删除</h1>
+    <p class="post-meta">2018-09-20</p>
   </header>
 
   <article class="post-content">
-    <p>评论展示区！</p>
+    <p>本文介绍了git branch的删除的使用方法！</p>
 
 <!--more-->
+
+<h3 id="删除本地分支">删除本地分支</h3>
+<p><code class="highlighter-rouge">git branch -d branch_name</code></p>
+
+<h3 id="删除远程分支注意冒号">删除远程分支（注意冒号）</h3>
+<p><code class="highlighter-rouge">git push origin :branch_name</code></p>
 
   </article>
 
 </div>
 
 
-  <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="/contact/" ></div>
-<script type="text/javascript">
-    (function(){
-        var appid = 'cytOe9ekU';
-        var conf = 'prod_6a63ff521844c84f496a88ca3757c14a';
-        var width = window.innerWidth || document.documentElement.clientWidth;
-        if (width < 960) {
-            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  <div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://github.wangkaimin.com/gitment/style/default.css">
+<script src="https://github.wangkaimin.com/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '/git/branch/2018/09/20/git-branch-delete.html',
+        owner: 'kaiminwang',
+        repo: 'gitment',
+        oauth: {
+            client_id: '32fbc732d1d5c8c2a92d',
+            client_secret: '9426507430ed3491daea8b596939a7dc0200c200',
+        },
+    });
+    gitment.render('gitmentContainer');
+</script>
 
       </div>
     </div>

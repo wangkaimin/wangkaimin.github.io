@@ -1,3 +1,7 @@
+<p>本文通过一个真实的案例，分析遇到的NoSuchMethodError这种问题时，如何解决！</p>
+
+<!--more-->
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1006)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
@@ -96,3 +100,16 @@ Caused by: java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.tr
 	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
 	at org.springframework.data.redis.core.RedisTemplate.hasKey(RedisTemplate.java:739)
 </code></pre></div></div>
+
+<h3 id="找到关键点">找到关键点</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
+</code></pre></div></div>
+<p><code class="highlighter-rouge">io.netty.util.internal.ReflectionUtil</code>类下，找不到trySetAccessible这个方法。</p>
+
+<h3 id="原因寻找">原因寻找</h3>
+<p>一般因为两种原因导致：</p>
+<ol>
+  <li>同一jar包出现不同版本</li>
+  <li>不同jar包出现同名class</li>
+</ol>
+

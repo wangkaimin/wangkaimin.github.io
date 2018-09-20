@@ -6,9 +6,34 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Sep 2018 15:08:59 +0800</pubDate>
-    <lastBuildDate>Thu, 20 Sep 2018 15:08:59 +0800</lastBuildDate>
+    <pubDate>Thu, 20 Sep 2018 19:47:08 +0800</pubDate>
+    <lastBuildDate>Thu, 20 Sep 2018 19:47:08 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>掌握git：git branch 删除</title>
+        <description>&lt;p&gt;本文介绍了git branch的删除的使用方法！&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;删除本地分支&quot;&gt;删除本地分支&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch -d branch_name&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;删除远程分支注意冒号&quot;&gt;删除远程分支（注意冒号）&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin :branch_name&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 20 Sep 2018 19:30:00 +0800</pubDate>
+        <link>http://github.wangkaimin.com/git/branch/2018/09/20/git-branch-delete.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/git/branch/2018/09/20/git-branch-delete.html</guid>
+        
+        <category>git</category>
+        
+        
+        <category>git</category>
+        
+        <category>branch</category>
+        
+      </item>
     
       <item>
         <title>SVN 提交操作</title>
@@ -88,7 +113,11 @@ svn commit -m &quot;SVN readme.&quot;
     
       <item>
         <title>NoSuchMethodError 解决思路</title>
-        <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
+        <description>&lt;p&gt;本文通过一个真实的案例，分析遇到的NoSuchMethodError这种问题时，如何解决！&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1006)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
@@ -186,11 +215,28 @@ Caused by: java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.tr
 	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
 	at org.springframework.data.redis.core.RedisTemplate.hasKey(RedisTemplate.java:739)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;找到关键点&quot;&gt;找到关键点&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Caused by: java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;io.netty.util.internal.ReflectionUtil&lt;/code&gt;类下，找不到trySetAccessible这个方法。&lt;/p&gt;
+
+&lt;h3 id=&quot;原因寻找&quot;&gt;原因寻找&lt;/h3&gt;
+&lt;p&gt;一般因为两种原因导致：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;同一jar包出现不同版本&lt;/li&gt;
+  &lt;li&gt;不同jar包出现同名class&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
         <pubDate>Wed, 19 Sep 2018 00:00:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/2018/09/19/redis-cluster-reflect.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/2018/09/19/redis-cluster-reflect.html</guid>
+        <link>http://github.wangkaimin.com/java/2018/09/19/no-such-method-error.html</link>
+        <guid isPermaLink="true">http://github.wangkaimin.com/java/2018/09/19/no-such-method-error.html</guid>
         
+        <category>java</category>
+        
+        
+        <category>java</category>
         
       </item>
     
@@ -751,32 +797,6 @@ source /etc/profile
         
         
         <category>mysql</category>
-        
-      </item>
-    
-      <item>
-        <title>掌握git：git submodule使用</title>
-        <description>&lt;p&gt;本文介绍Git子模块的使用！&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;参考：&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97&quot;&gt;Git-工具-子模块&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sat, 08 Sep 2018 00:10:00 +0800</pubDate>
-        <link>http://github.wangkaimin.com/git/submodule/2018/09/08/git-submodule.html</link>
-        <guid isPermaLink="true">http://github.wangkaimin.com/git/submodule/2018/09/08/git-submodule.html</guid>
-        
-        <category>git</category>
-        
-        
-        <category>git</category>
-        
-        <category>submodule</category>
         
       </item>
     
