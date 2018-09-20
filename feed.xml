@@ -6,8 +6,8 @@
 </description>
     <link>http://github.wangkaimin.com/</link>
     <atom:link href="http://github.wangkaimin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Sep 2018 18:37:16 +0800</pubDate>
-    <lastBuildDate>Wed, 19 Sep 2018 18:37:16 +0800</lastBuildDate>
+    <pubDate>Thu, 20 Sep 2018 15:08:59 +0800</pubDate>
+    <lastBuildDate>Thu, 20 Sep 2018 15:08:59 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -87,7 +87,7 @@ svn commit -m &quot;SVN readme.&quot;
       </item>
     
       <item>
-        <title>NoSuchMethodError</title>
+        <title>NoSuchMethodError 解决思路</title>
         <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: io.netty.util.internal.ReflectionUtil.trySetAccessible(Ljava/lang/reflect/AccessibleObject;)Ljava/lang/Throwable;
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1006)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
@@ -101,10 +101,8 @@ svn commit -m &quot;SVN readme.&quot;
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.sogou.telepartner.web.filter.StatFuncFilter.doFilter(StatFuncFilter.java:66)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.sogou.bizsession.filter.SessionFilter.doFilter(SessionFilter.java:79)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
